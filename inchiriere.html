@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inchiriere containere — birou, depozitare, sanitar, frigorific si cabina de paza. Solutii flexibile pentru santiere si evenimente. CUBOX Romania.">
+  <title>Închiriere containere — CUBOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── listing page: card simplificat ── */
+    .product-card__specs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin-top: 4px; }
+    .product-card__sub { display: none; }
+    .product-card__tag--comanda { color: #1448a0; background: #dce8fb; border-color: #8cb0e8; font-weight: 700; }
+    .autorizatie-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8f5e9; color: #1b6b28; border: 1.5px solid #a5d6a7; border-radius: 6px; padding: 7px 13px; font-size: 13px; font-weight: 700; margin-top: 2px; margin-bottom: 2px; }
+    .product-card__tag--disponibil { color: #1a6b2a; background: #e2f5e5; border-color: #8ecf9a; font-weight: 700; }
+    .autorizatie-badge svg { width: 14px; height: 14px; flex-shrink: 0; color: #1b6b28; }
+    .price-note { display: none; }
+    .product-card__title { font-size: 22px; }
+    .product-card__variant-desc { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; line-height: 1; }
+    .product-card__variant-desc span { background: #1a5fb4; color: #ffffff; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 5px; letter-spacing: 0.01em; }
+    .product-card__info-strip { display: flex; flex-direction: column; gap: 7px; padding: 10px 14px; margin-top: 6px; background: #f4f5f7; border: 1px solid #dde0e6; border-radius: 8px; }
+    .product-card__info-strip span { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; color: #3a3f4a; }
+    .product-card__info-strip svg { width: 14px; height: 14px; flex-shrink: 0; color: #555b6e; }
+    .product-card__price-row .btn--primary {
+      width: 100%; justify-content: center;
+      padding: 15px 24px; font-size: 15px; margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar__inner">
+      <a href="tel:+40700000000" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>0700 000 000</span>
+      </a>
+      <div class="topbar__divider"></div>
+      <a href="mailto:contact@cubox.ro" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>contact@cubox.ro</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/CU.webp" alt="CUBOX Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item--dropdown"><a href="containere-modulare.html">Containere modulare <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-modulare.html#standard">Standard</a></li><li><a href="containere-modulare.html#duble">Duble</a></li><li><a href="containere-modulare.html#terasa">Cu terasă</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="containere-comerciale.html">Containere comerciale <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-comerciale.html#showroom">Showroom</a></li><li><a href="containere-comerciale.html#fastfood">Fast food</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="containere-maritime.html">Containere maritime <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-maritime.html#noi">Noi</a></li><li><a href="containere-maritime.html#sh">Second Hand</a></li></ul></li>
+          <li><a href="inchiriere.html" class="active">Închiriere containere</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="index.html#cerere-oferta" class="nav__cta">Cere ofertă</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Meniu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Acasă</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Închiriere containere</span>
+      </nav>
+      <h1 class="page-hero__title">Închiriere containere</h1>
+      <p class="page-hero__desc">Containere de închiriere pentru birou, depozitare, sanitar, frigorific și cabină de pază.</p>
+    </div>
+  </div>
+
+  <!-- PRODUSE INCHIRIERE -->
+  <section class="section section--gray" id="variante">
+    <div class="container">
+
+      <!-- Container tip birou -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <img src="CONTAINERE/INCHIRIERI CONTINERE/Continere birou.webp"
+               alt="Container tip birou">
+          <span class="product-card__num">01</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--disponibil">
+            <span class="product-card__tag-dot" style="background:#1a6b2a"></span>
+            Disponibil
+          </span>
+          <div>
+            <p class="product-card__sub">Închiriere container</p>
+            <h2 class="product-card__title">Container tip birou</h2>
+            <p class="product-card__variant-desc"><span>Spațiu de lucru modular</span><span>Climatizat</span><span>Gata de utilizare</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Dimensiuni</p>
+                <p class="spec-item__value">6.000 × 2.400 mm</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Suprafață</p>
+                <p class="spec-item__value">~14,4 m²</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Climatizare</p>
+                <p class="spec-item__value">AC inclus</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Utilități</p>
+                <p class="spec-item__value">Electricitate inclusă</p>
+              </div>
+            </div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț închiriere</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">4,5</span><span class="product-card__price-currency"> € / zi</span></div>
+            </div>
+            <a href="index.html#cerere-oferta" class="btn btn--primary">
+              Cere ofertă pentru închiriere
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container depozitare -->
+      <div class="product-card reveal reveal-d1">
+        <div class="product-card__img">
+          <img src="CONTAINERE/INCHIRIERI CONTINERE/Container depozitare.webp"
+               alt="Container depozitare">
+          <span class="product-card__num">02</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--disponibil">
+            <span class="product-card__tag-dot" style="background:#1a6b2a"></span>
+            Disponibil
+          </span>
+          <div>
+            <p class="product-card__sub">Închiriere container</p>
+            <h2 class="product-card__title">Container depozitare</h2>
+            <p class="product-card__variant-desc"><span>Spațiu sigur de depozitare</span><span>Ușă largă de acces</span><span>Ideal pentru șantiere și evenimente</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Dimensiuni</p>
+                <p class="spec-item__value">6.000 × 2.400 mm</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Suprafaţă</p>
+                <p class="spec-item__value">14,4 m²</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Capacitate</p>
+                <p class="spec-item__value">~14,4 m³</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Structură</p>
+                <p class="spec-item__value">Structură zincată profilată la rece</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Acces</p>
+                <p class="spec-item__value">Ușă metalică dublă</p>
+              </div>
+            </div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț închiriere</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">3,5</span><span class="product-card__price-currency"> € / zi</span></div>
+            </div>
+            <a href="index.html#cerere-oferta" class="btn btn--primary">
+              Cere ofertă pentru închiriere
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container sanitar -->
+      <div class="product-card reveal reveal-d2">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/INCHIRIERI CONTINERE/continer sanitar.webp"
+                 alt="Container sanitar exterior">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/INCHIRIERI CONTINERE/Continer sanitar- interior.webp"
+                 alt="Container sanitar interior">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+            <div class="pg-gallery__dots">
+              <button class="pg-gallery__dot active"></button>
+              <button class="pg-gallery__dot"></button>
+            </div>
+          </div>
+          <span class="product-card__num">03</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--disponibil">
+            <span class="product-card__tag-dot" style="background:#1a6b2a"></span>
+            Disponibil
+          </span>
+          <div>
+            <p class="product-card__sub">Închiriere container</p>
+            <h2 class="product-card__title">Container sanitar</h2>
+            <p class="product-card__variant-desc"><span>Echipat complet</span><span>Apă curentă</span><span>Ideal pentru șantiere și evenimente</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Dimensiuni</p>
+                <p class="spec-item__value">6.000 × 2.400 mm</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Suprafaţă</p>
+                <p class="spec-item__value">14,4 m²</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0014 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 01-11.91 4.97"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Apă</p>
+                <p class="spec-item__value">Racord curent</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Cabine</p>
+                <p class="spec-item__value">Multiple cabine WC</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Boiler</p>
+                <p class="spec-item__value">Apă caldă inclusă</p>
+              </div>
+            </div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț închiriere de la</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">5,5</span><span class="product-card__price-currency"> € / zi</span></div>
+            </div>
+            <a href="index.html#cerere-oferta" class="btn btn--primary">
+              Cere ofertă pentru închiriere
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container frigorific -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <img src="CONTAINERE/INCHIRIERI CONTINERE/Continer frigorific.webp"
+               alt="Container frigorific">
+          <span class="product-card__num">04</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--disponibil">
+            <span class="product-card__tag-dot" style="background:#1a6b2a"></span>
+            Disponibil
+          </span>
+          <div>
+            <p class="product-card__sub">Închiriere container</p>
+            <h2 class="product-card__title">Container frigorific</h2>
+            <p class="product-card__variant-desc"><span>Temperatură controlată</span><span>Ideal pentru alimente și produse sensibile</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Dimensiuni</p>
+                <p class="spec-item__value">6.000 × 2.400 mm</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Suprafaţă</p>
+                <p class="spec-item__value">14,4 m²</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Temperatură</p>
+                <p class="spec-item__value">-20°C până la +5°C</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Consum</p>
+                <p class="spec-item__value">Racord 380V</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Certificat</p>
+                <p class="spec-item__value">ATP / ADR</p>
+              </div>
+            </div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț închiriere</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">24</span><span class="product-card__price-currency"> € / zi</span></div>
+            </div>
+            <a href="index.html#cerere-oferta" class="btn btn--primary">
+              Cere ofertă pentru închiriere
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cabina paza -->
+      <div class="product-card reveal reveal-d1">
+        <div class="product-card__img">
+          <img src="CONTAINERE/INCHIRIERI CONTINERE/Continer cabina paza.webp"
+               alt="Cabină de pază">
+          <span class="product-card__num">05</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--disponibil">
+            <span class="product-card__tag-dot" style="background:#1a6b2a"></span>
+            Disponibil
+          </span>
+          <div>
+            <p class="product-card__sub">Închiriere container</p>
+            <h2 class="product-card__title">Cabină de pază</h2>
+            <p class="product-card__variant-desc"><span>Compactă și rezistentă</span><span>Vizibilitate 360°</span><span>Livrare și montaj rapid</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Dimensiuni</p>
+                <p class="spec-item__value">2.400 × 2.400 mm</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Suprafaţă</p>
+                <p class="spec-item__value">~5,8 m²</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Ferestre</p>
+                <p class="spec-item__value">Pe toate laturile</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Structură</p>
+                <p class="spec-item__value">Oțel zincat</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <p class="spec-item__label">Utilități</p>
+                <p class="spec-item__value">Electricitate inclusă</p>
+              </div>
+            </div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț închiriere</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">2,8</span><span class="product-card__price-currency"> € / zi</span></div>
+            </div>
+            <a href="index.html#cerere-oferta" class="btn btn--primary">
+              Cere ofertă pentru închiriere
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section__header reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section__title">Interesați de închiriere?</h2>
+        <p class="section__desc" style="max-width:520px;">Contactați-ne pentru un preț personalizat în funcție de durata închirierii, tipul de container și locația livrării.</p>
+        <a href="index.html#cerere-oferta" class="btn btn--primary btn--lg" style="margin-top:24px;">
+          Cere ofertă gratuită
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/CU.webp" alt="CUBOX" class="footer__logo">
+          <p>Containere modulare personalizate.<br>Fabricate în România.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Produse</h4>
+          <div class="footer__links">
+            <a href="containere-modulare.html">Containere modulare</a>
+            <a href="containere-comerciale.html">Containere comerciale</a>
+            <a href="containere-maritime.html">Containere maritime</a>
+            <a href="inchiriere.html">Închiriere containere</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact & Legal</h4>
+          <div class="footer__links">
+            <a href="index.html#cerere-oferta">Cere ofertă gratuită</a>
+            <a href="index.html#cum-functioneaza">Cum funcționează</a>
+            <a href="politica-confidentialitate.html">Politică de confidențialitate</a>
+            <a href="termeni-si-conditii.html">Termeni și condiții</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CUBOX. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/cookie-consent.js"></script></body>
+</html>
+
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vizualizare fisa tehnica container CUBOX.">
+  <title>Fișă Tehnică | CUBOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: #404040;
+      overflow: hidden;
+    }
+
+    .viewer-bar {
+      background: #1B4FA8;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+      min-height: 56px;
+      z-index: 10;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border: 1.5px solid rgba(255,255,255,0.45);
+      border-radius: 6px;
+      transition: background .2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.12); }
+
+    .viewer-title {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      flex: 1;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 8px;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F5A100;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background .2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-download:hover { background: #d98e00; }
+
+    #pdf-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pdf-page {
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+      background: #fff;
+      display: block;
+    }
+
+    .pdf-page canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    #pdf-loading {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: #F5A100;
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 600px) {
+      .viewer-title { display: none; }
+      .viewer-bar { gap: 10px; }
+      #pdf-scroll { padding: 12px 8px; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="viewer-bar">
+    <a href="#" class="btn-back" id="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Înapoi la produs
+    </a>
+
+    <span class="viewer-title" id="viewer-title">Fișă Tehnică</span>
+
+    <a href="#" class="btn-download" id="btn-download" download>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descarcă PDF
+    </a>
+  </div>
+
+  <div id="pdf-scroll">
+    <div id="pdf-loading">
+      <div class="spinner"></div>
+      Se încarcă fișa tehnică…
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    const params  = new URLSearchParams(location.search);
+    const pdfUrl  = params.get('pdf')  || '';
+    const backUrl = params.get('back') || 'index.html';
+    const title   = params.get('title') || 'Fișă Tehnică';
+
+    document.getElementById('btn-back').href     = backUrl;
+    document.getElementById('btn-download').href = pdfUrl;
+    document.getElementById('btn-download').setAttribute('download', pdfUrl.split('/').pop());
+    document.getElementById('viewer-title').textContent = title;
+    document.title = title + ' | CUBOX';
+
+    const scroll = document.getElementById('pdf-scroll');
+
+    /* ── fallback iframe (local file://) ── */
+    function useIframe() {
+      scroll.style.padding = '0';
+      scroll.style.gap = '0';
+      const iframe = document.createElement('iframe');
+      iframe.src = pdfUrl;
+      iframe.style.cssText = 'flex:1;border:none;width:100%;height:100%;';
+      scroll.innerHTML = '';
+      scroll.appendChild(iframe);
+    }
+
+    /* ── PDF.js renderer (HTTPS / production) ── */
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    async function renderPDF(url) {
+      const pdf = await pdfjsLib.getDocument(url).promise;
+      document.getElementById('pdf-loading').remove();
+      const containerWidth = Math.min(scroll.clientWidth - 32, 900);
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page     = await pdf.getPage(i);
+        const baseVP   = page.getViewport({ scale: 1 });
+        const scale    = (containerWidth / baseVP.width) * window.devicePixelRatio;
+        const viewport = page.getViewport({ scale });
+        const wrapper  = document.createElement('div');
+        wrapper.className = 'pdf-page';
+        const canvas = document.createElement('canvas');
+        canvas.width  = viewport.width;
+        canvas.height = viewport.height;
+        wrapper.appendChild(canvas);
+        scroll.appendChild(wrapper);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+      }
+    }
+
+    if (pdfUrl) {
+      if (location.protocol === 'file:') {
+        /* local development — Chrome blocks CDN→file:// fetch, use native viewer */
+        useIframe();
+      } else {
+        renderPDF(pdfUrl).catch(useIframe);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fișă tehnică container modular comercial — kiosk, coffee to go, gelaterie, florărie, salon, retail. Specificații constructive complete. CUBOX România.">
+  <title>Fișă Tehnică — Container modular comercial | CUBOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Stat boxes */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .stat-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+    .stat-box__label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .stat-box__value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    /* Utilizări + Avantaje grid */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .info-card__head {
+      background: var(--blue);
+      color: #fff;
+      padding: 13px 20px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .info-card__body {
+      padding: 20px 22px;
+    }
+    .info-card__body ul {
+      margin: 0; padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .info-card__body li {
+      font-size: 13.5px;
+      color: var(--text);
+      line-height: 1.5;
+      padding-left: 16px;
+      position: relative;
+    }
+    .info-card__body li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* Nota de configurare */
+    .config-note {
+      margin-top: 32px;
+      padding: 16px 20px;
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: #78350f;
+      line-height: 1.6;
+    }
+    .config-note strong { color: #92400e; }
+
+    /* Config section — dotari + finisaje */
+    .config-header {
+      margin-bottom: 32px;
+    }
+    .config-header__dims {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .dim-badge {
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* Tech specs grid */
+    .tech-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .tech-spec-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .tech-spec-card__head {
+      background: var(--blue);
+      color: #fff;
+      padding: 12px 18px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .tech-spec-card__body { padding: 16px 18px; }
+    .tech-spec-card__body ul {
+      margin: 0; padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tech-spec-card__body li {
+      font-size: 12.5px;
+      color: var(--text);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .tech-spec-card__body li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 7px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* Observatie */
+    .observatie {
+      margin-top: 40px;
+      padding: 16px 20px;
+      background: #f0fdf4;
+      border-left: 3px solid #16a34a;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #14532d;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .two-col-grid { grid-template-columns: 1fr; }
+      .tech-specs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      .tech-specs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar__inner">
+      <a href="tel:+40700000000" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>0700 000 000</span>
+      </a>
+      <div class="topbar__divider"></div>
+      <a href="mailto:contact@cubox.ro" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>contact@cubox.ro</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo">
+        <img src="../assets/CU.webp" alt="CUBOX Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item--dropdown"><a href="../containere-modulare.html">Containere modulare <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="../containere-modulare.html#standard">Standard</a></li><li><a href="../containere-modulare.html#duble">Duble</a></li><li><a href="../containere-modulare.html#terasa">Cu terasă</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="../containere-comerciale.html">Containere comerciale <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="../containere-comerciale.html#showroom">Showroom</a></li><li><a href="../containere-comerciale.html#fastfood">Fast food</a></li><li><a href="../containere-comerciale.html#kiosk">Kiosk</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="../containere-maritime.html">Containere maritime <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="../containere-maritime.html#noi">Noi</a></li><li><a href="../containere-maritime.html#sh">Second Hand</a></li></ul></li>
+          <li><a href="../inchiriere.html">Închiriere containere</a></li>
+          <li><a href="../proiecte.html">Proiecte</a></li>
+          <li><a href="#cerere-oferta" class="nav__cta">Cere ofertă</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Meniu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Acasă</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="../containere-comerciale.html">Containere comerciale</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Fișă Tehnică</span>
+      </nav>
+      <h1 class="page-hero__title">Fișă Tehnică — Container modular comercial</h1>
+      <p class="page-hero__desc">Kiosk · Coffee to go · Gelaterie · Florărie · Salon · Retail · Variante personalizabile</p>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="section section--gray">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <div>
+          <span class="eyebrow">Specificații generale</span>
+          <h2 class="section__title" style="margin-bottom:0">Parametri de bază</h2>
+        </div>
+      </div>
+
+      <div class="stat-grid reveal">
+        <div class="stat-box">
+          <p class="stat-box__label">Dimensiuni uzuale</p>
+          <p class="stat-box__value">3 / 6 m</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__label">Lățimi uzuale</p>
+          <p class="stat-box__value">2,40 / 4,80 m</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__label">Înălțime uzuală</p>
+          <p class="stat-box__value">2,55 m</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__label">Configurație</p>
+          <p class="stat-box__value" style="font-size:16px">La comandă</p>
+        </div>
+      </div>
+
+      <div class="two-col-grid reveal">
+        <div class="info-card">
+          <div class="info-card__head">Utilizări recomandate</div>
+          <div class="info-card__body">
+            <ul>
+              <li>Coffee to go, gelaterie, fresh bar, food kiosk sau fast-food compact</li>
+              <li>Tonetă de ziare, accesorii, retail mic, showroom sau punct de informare</li>
+              <li>Florărie, salon, barber shop, studio servicii sau punct comercial sezonier</li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__head">Avantaje comerciale</div>
+          <div class="info-card__body">
+            <ul>
+              <li>Aspect modern, ușor de personalizat în funcție de brand</li>
+              <li>Montaj rapid, relocare facilă și amprentă redusă la sol</li>
+              <li>Fațade configurabile cu vitrină, oblon, copertină, firmă luminoasă și acces clienți</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="config-note reveal">
+        <strong>Notă de configurare:</strong> Modelele comerciale pot fi realizate pe configurații compacte 3×2,4 m sau pe configurații extinse, în funcție de destinație, vitrină, fluxul de lucru și dotările interioare.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONFIGURATIE COMERCIALA -->
+  <section class="section section--white">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <div>
+          <span class="eyebrow">Configurație comercială</span>
+          <h2 class="section__title" style="margin-bottom:8px">Model compact cu oblon de servire</h2>
+          <div class="config-header__dims">
+            <span class="dim-badge">3,00 m lungime</span>
+            <span class="dim-badge">2,40 m lățime</span>
+            <span class="dim-badge">2,55 m înălțime</span>
+            <span class="dim-badge">Oblon servire</span>
+          </div>
+          <p style="margin-top:16px; font-size:14px; color:var(--text-muted); line-height:1.6">
+            Variantă potrivită pentru kiosk, punct de servire, cafea, înghețată, fresh bar, bilete, informații sau vânzare produse de mici dimensiuni.
+          </p>
+        </div>
+      </div>
+
+      <div class="two-col-grid reveal">
+        <div class="info-card">
+          <div class="info-card__head">Dotări comerciale posibile</div>
+          <div class="info-card__body">
+            <ul>
+              <li>Fereastră de servire cu oblon rabatabil și blat exterior</li>
+              <li>Copertină, firmă luminoasă, casetă de reclamă sau panou branding</li>
+              <li>Vitrină, ușă PVC/termopan, ușă de acces pentru personal, geamuri fixe sau glisante</li>
+              <li>Iluminat interior/exterior, prize suplimentare și trasee electrice adaptate echipamentelor</li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__head">Finisaje disponibile</div>
+          <div class="info-card__body">
+            <ul>
+              <li>Panouri sandwich albe, gri antracit, maro sau finisaj tip lemn/bamboo</li>
+              <li>Structură metalică vopsită în gri antracit, alb, maro sau culoare RAL la cerere</li>
+              <li>Tâmplărie albă, gri antracit sau alte variante compatibile cu proiectul</li>
+              <li>Interior configurabil pentru rafturi, tejghea, depozitare sau zonă de lucru</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPECIFICATII TEHNICE -->
+  <section class="section section--gray">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <div>
+          <span class="eyebrow">Caracteristici constructive</span>
+          <h2 class="section__title" style="margin-bottom:8px">Specificații tehnice</h2>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.6; max-width:600px">
+            Specificațiile de mai jos reprezintă configurația tehnică de bază. Dotările comerciale se personalizează în funcție de destinația finală.
+          </p>
+        </div>
+      </div>
+
+      <div class="tech-specs-grid reveal">
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Structură metalică</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Structură zincată, profilată la rece, grosime 2 mm</li>
+              <li>Protecție anti-rugină</li>
+              <li>Vopsire în două straturi: grund și vopsea poliuretanică</li>
+              <li>Stâlpi profilați la rece din tablă zincată, grosime 2 mm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Pereți</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Panou sandwich cu grosime de 40 mm</li>
+              <li>Miez cu spumă poliuretanică</li>
+              <li>Finisaj exterior personalizabil în funcție de proiect</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Pardoseală</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Tablă zincată cutată H12, grosime 0,5 mm</li>
+              <li>Lonjeroane zincate cu grosime de 2 mm</li>
+              <li>Pardoseală interioară din OSB 18 mm</li>
+              <li>Finisaj linoleum</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Acoperiș</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Structură zincată, profilată la rece, cu canal de drenare a apei</li>
+              <li>Tablă zincată dublu fălțuită, grosime 0,5 mm</li>
+              <li>Traverse din țeavă rectangulară, grosime 2 mm</li>
+              <li>Folie anticondens, vată minerală 100 mm și lambriu PVC</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Instalație electrică</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Tensiune de lucru 230 V</li>
+              <li>1 priză exterioară 230 V</li>
+              <li>1 tablou cu siguranțe automate</li>
+              <li>2 prize duble, 1 întrerupător și 1 lampă interior</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-spec-card">
+          <div class="tech-spec-card__head">Personalizare comercială</div>
+          <div class="tech-spec-card__body">
+            <ul>
+              <li>Oblon de servire, vitrină frontală, uși duble sau tâmplărie glisantă</li>
+              <li>Firmă luminoasă, panou publicitar, copertină și iluminat decorativ</li>
+              <li>Rafturi, tejghea, blat de servire, spații de depozitare și compartimentări interioare</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="observatie reveal">
+        <strong>Observație:</strong> Pentru containere comerciale, poziția ușilor, vitrinelor, ferestrelor, oblonului, copertinei și instalației electrice se stabilește pe schița de producție înainte de execuție.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--blue" id="cerere-oferta">
+    <div class="container">
+      <div class="form-split">
+        <div class="form-split__left reveal">
+          <span class="eyebrow" style="color:rgba(245,161,0,0.85)">Contact rapid</span>
+          <h2 class="section__title section__title--white">Interesat de<br>un container comercial?</h2>
+          <p class="section__desc section__desc--white" style="margin-bottom:32px">Lasă-ne numărul de telefon și te sunăm noi în maximum 48 de ore cu toate detaliile și prețul final.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>Te sunăm în 48 de ore</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Ofertă fără angajament</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Răspuns rapid garantat</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span>Livrare în 7–14 zile lucrătoare</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-split__right reveal reveal-d2">
+          <form class="form" id="contact-form">
+            <input type="hidden" name="produs" value="Container modular comercial — Fișă Tehnică">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="nume">Nume și prenume *</label>
+                <input type="text" id="nume" name="nume" required placeholder="Ion Popescu">
+              </div>
+              <div class="form__group">
+                <label for="telefon">Telefon *</label>
+                <input type="tel" id="telefon" name="telefon" required placeholder="07xx xxx xxx">
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="locatie">Locație livrare *</label>
+              <input type="text" id="locatie" name="locatie" required placeholder="ex: București, sector 1 / Cluj-Napoca...">
+            </div>
+            <div class="form__group">
+              <label for="mesaj">Mesaj (opțional)</label>
+              <textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne ce întrebări ai sau detalii despre proiect..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              Trimite cererea
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form__status" id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="../assets/CU.webp" alt="CUBOX" class="footer__logo">
+          <p>Containere modulare personalizate.<br>Fabricate în România.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Produse</h4>
+          <div class="footer__links">
+            <a href="../containere-modulare.html">Containere modulare</a>
+            <a href="../containere-comerciale.html">Containere comerciale</a>
+            <a href="../containere-maritime.html">Containere maritime</a>
+            <a href="../inchiriere.html">Închiriere containere</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__links">
+            <a href="#cerere-oferta">Cere ofertă gratuită</a>
+            <a href="../index.html#cum-functioneaza">Cum funcționează</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CUBOX. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#cerere-oferta" class="btn btn--primary btn--full">Cere ofertă gratuită</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

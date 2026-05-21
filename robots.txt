@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /pdf-viewer.html
+Disallow: /fisa-tehnica-container-comercial.html
+
+Sitemap: https://cubox.ro/sitemap.xml

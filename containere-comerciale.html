@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Containere comerciale pentru showroom si fast food — 6 modele personalizabile. Solutii moderne pentru afaceri. Solicita oferta CUBOX Romania.">
+  <title>Containere comerciale — Showroom & Fast food | CUBOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── listing page: card simplificat ── */
+    .product-card__specs { display: none; }
+    .product-card__sub { display: none; }
+    .product-card__tag--comanda { color: #1448a0; background: #dce8fb; border-color: #8cb0e8; font-weight: 700; }
+    .autorizatie-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8f5e9; color: #1b6b28; border: 1.5px solid #a5d6a7; border-radius: 6px; padding: 7px 13px; font-size: 13px; font-weight: 700; margin-top: 2px; margin-bottom: 2px; }
+    .autorizatie-badge svg { width: 14px; height: 14px; flex-shrink: 0; color: #1b6b28; }
+    .price-note { display: none; }
+    .product-card__title { font-size: 22px; }
+    .product-card__variant-desc { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; line-height: 1; }
+    .product-card__variant-desc span { background: #1a5fb4; color: #ffffff; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 5px; letter-spacing: 0.01em; }
+    .product-card__info-strip { display: flex; flex-direction: column; gap: 7px; padding: 10px 14px; margin-top: 6px; background: #f4f5f7; border: 1px solid #dde0e6; border-radius: 8px; }
+    .product-card__info-strip span { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; color: #3a3f4a; }
+    .product-card__info-strip svg { width: 14px; height: 14px; flex-shrink: 0; color: #555b6e; }
+    .product-card__price-row .btn--primary {
+      width: 100%; justify-content: center;
+      padding: 15px 24px; font-size: 15px; margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar__inner">
+      <a href="tel:+40700000000" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>0700 000 000</span>
+      </a>
+      <div class="topbar__divider"></div>
+      <a href="mailto:contact@cubox.ro" class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>contact@cubox.ro</span>
+      </a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/CU.webp" alt="CUBOX Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item--dropdown"><a href="containere-modulare.html">Containere modulare <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-modulare.html#standard">Standard</a></li><li><a href="containere-modulare.html#duble">Duble</a></li><li><a href="containere-modulare.html#terasa">Cu terasă</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="containere-comerciale.html">Containere comerciale <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-comerciale.html#showroom">Showroom</a></li><li><a href="containere-comerciale.html#fastfood">Fast food</a></li><li><a href="containere-comerciale.html#kiosk">Kiosk</a></li></ul></li>
+          <li class="nav__item--dropdown"><a href="containere-maritime.html">Containere maritime <svg class="nav__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="nav__dropdown"><li><a href="containere-maritime.html#noi">Noi</a></li><li><a href="containere-maritime.html#sh">Second Hand</a></li></ul></li>
+          <li><a href="inchiriere.html">Închiriere containere</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="#cerere-oferta" class="nav__cta">Cere ofertă</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Meniu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Acasă</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Containere comerciale</span>
+      </nav>
+      <h1 class="page-hero__title">Containere comerciale</h1>
+      <p class="page-hero__desc">Containere pentru showroom (vitrină sau roll-up), fast food (oblon sau riflaj) și kiosk comercial compact. Fabricate la comandă în România.</p>
+    </div>
+  </div>
+
+  <section class="section section--gray" id="variante">
+    <div class="container">
+
+      <div class="product-group-header reveal" id="showroom">
+        <span class="product-group-header__tag">Showroom</span>
+        <h2 class="product-group-header__title">Containere tip showroom</h2>
+        <span class="product-group-header__count">3 variante</span>
+      </div>
+
+      <!-- 01 — Vitrină Alb -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina alb 6x3m/container comercial tip showroom- vitrina alb-randare.webp"
+                 alt="Container showroom vitrină alb — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina alb 6x3m/container comercial tip showroom- vitrina alb .webp"
+                 alt="Container showroom vitrină alb">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">01</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip showroom · Vitrină panoramică</p>
+            <h2 class="product-card__title">Container showroom — Vitrină Alb</h2>
+            <p class="product-card__variant-desc"><span>Alb</span><span>Vitrină panoramică</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">6.000 × 3.000 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">18 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Tip acces</p><p class="spec-item__value">Vitrină panoramică</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">4.500</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-showroom-vitrina-alb.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — Vitrină Gri antracit -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina gri 6x3 m/container comercial tip showroom- vitrina gri-randare.webp"
+                 alt="Container showroom vitrină gri antracit — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina gri 6x3 m/container comercial tip showroom- vitrina gri.webp"
+                 alt="Container showroom vitrină gri antracit">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">02</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip showroom · Vitrină panoramică</p>
+            <h2 class="product-card__title">Container showroom — Vitrină Gri antracit</h2>
+            <p class="product-card__variant-desc"><span>Gri antracit</span><span>Vitrină panoramică</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">6.000 × 3.000 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">18 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Tip acces</p><p class="spec-item__value">Vitrină panoramică</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">4.900</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-showroom-vitrina-gri.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Roll-up -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial-tip showroom 6x2.4m -randare - Copy.webp"
+                 alt="Container showroom roll-up 6×2,4m — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial-tip showroom 6x3m -randare.webp"
+                 alt="Container showroom roll-up 6×3m — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial -tip showroom- 6x 2.4 m.webp"
+                 alt="Container showroom roll-up 6×2,4m">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial-tip showroom 6x3m .webp"
+                 alt="Container showroom roll-up 6×3m">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial- tip showroom, roll up inchis-6x 3m.webp"
+                 alt="Container showroom roll-up închis 6×3m">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/continer comercial tip showroom- roll up inchis 6x2.4 m .webp"
+                 alt="Container showroom roll-up închis 6×2,4m">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">03</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip showroom · Roll-up</p>
+            <h2 class="product-card__title">Container showroom — Roll-up</h2>
+            <p class="product-card__variant-desc"><span>Gri antracit</span><span>Ușă roll-up</span><span>Disponibil 6×2,4 m și 6×3 m</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">6×2,4 m sau 6×3 m</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">14,4 m² – 18 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Tip acces</p><p class="spec-item__value">Ușă roll-up</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț de la</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">6.400</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-showroom-rollup.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-group-header reveal" id="fastfood">
+        <span class="product-group-header__tag">Fast food</span>
+        <h2 class="product-group-header__title">Containere tip fast food</h2>
+        <span class="product-group-header__count">3 variante</span>
+      </div>
+
+      <!-- 04 — Oblon -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- gri antracit oblon-randare.webp"
+                 alt="Container fast food oblon gri antracit — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- structura gri antracit- oblon-randare.webp"
+                 alt="Container fast food oblon structură gri antracit — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- structura gri deschis-oblon- randare.webp"
+                 alt="Container fast food oblon structură gri deschis — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- gri antracit oblon.webp"
+                 alt="Container fast food oblon gri antracit">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">04</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip fast food · Oblon de servire</p>
+            <h2 class="product-card__title">Container fast food — Oblon</h2>
+            <p class="product-card__variant-desc"><span>Gri antracit</span><span>Structură gri deschis</span><span>3 variante de culoare</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">3.000 × 2.400 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">7,2 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Tip acces</p><p class="spec-item__value">Oblon de servire</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț de la</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">2.850</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-fastfood-oblon.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — Riflaj 4×2,4m -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj-randare.webp"
+                 alt="Container fast food riflaj 4×2,4m — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj.webp"
+                 alt="Container fast food riflaj 4×2,4m">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">05</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip fast food · Riflaj</p>
+            <h2 class="product-card__title">Container fast food — Riflaj 4×2,4 m</h2>
+            <p class="product-card__variant-desc"><span>Gri antracit</span><span>Finisaj riflaj premium</span><span>9,6 m²</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">4.000 × 2.400 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">9,6 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Finisaj</p><p class="spec-item__value">Riflaj gri antracit</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">3.350</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-fastfood-riflaj-4x24.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 — Riflaj 6×3m -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 6x3gri antracit cu riflaj/Continer comercial tip fastfood- 6x3- gri antracit cu riglaj- randare.webp"
+                 alt="Container fast food riflaj 6×3m — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 6x3gri antracit cu riflaj/Continer comercial tip fastfood- 6x3- gri antracit cu riglaj- .webp"
+                 alt="Container fast food riflaj 6×3m">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">06</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Tip fast food · Riflaj</p>
+            <h2 class="product-card__title">Container fast food — Riflaj 6×3 m</h2>
+            <p class="product-card__variant-desc"><span>Gri antracit</span><span>Finisaj riflaj premium</span><span>18 m²</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">6.000 × 3.000 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">18 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Finisaj</p><p class="spec-item__value">Riflaj gri antracit</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">4.500</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-fastfood-riflaj-6x3.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-group-header reveal" id="kiosk">
+        <span class="product-group-header__tag">Kiosk</span>
+        <h2 class="product-group-header__title">Container kiosk comercial compact</h2>
+        <span class="product-group-header__count">1 variantă</span>
+      </div>
+
+      <!-- 07 — Kiosk · Oblon 3×2,4m -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <div class="pg-gallery">
+            <img class="pg-gallery__slide active"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- structura gri deschis-oblon- randare.webp"
+                 alt="Container kiosk comercial oblon gri deschis — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- gri antracit oblon-randare.webp"
+                 alt="Container kiosk comercial oblon gri antracit — randare">
+            <img class="pg-gallery__slide"
+                 src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- gri antracit oblon.webp"
+                 alt="Container kiosk comercial oblon gri antracit">
+            <button class="pg-gallery__arrow pg-gallery__arrow--prev" aria-label="Imaginea anterioară"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="pg-gallery__arrow pg-gallery__arrow--next" aria-label="Imaginea următoare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <div class="pg-gallery__dots"><button class="pg-gallery__dot active"></button><button class="pg-gallery__dot"></button><button class="pg-gallery__dot"></button></div>
+          </div>
+          <span class="product-card__num">07</span>
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__tag product-card__tag--comanda"><span class="product-card__tag-dot product-card__tag-dot--comanda"></span>La comandă</span>
+          <div>
+            <p class="product-card__sub">Kiosk comercial · Oblon de servire</p>
+            <h2 class="product-card__title">Container kiosk — Oblon 3×2,4 m</h2>
+            <p class="product-card__variant-desc"><span>Gri deschis sau gri antracit</span><span>Coffee to go, florărie, tonetă, salon</span></p>
+          </div>
+          <div class="product-card__specs">
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="8" y2="3"/></svg></div><div><p class="spec-item__label">Dimensiuni</p><p class="spec-item__value">3.000 × 2.400 mm</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><p class="spec-item__label">Suprafață</p><p class="spec-item__value">7,2 m²</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><div><p class="spec-item__label">Tip acces</p><p class="spec-item__value">Oblon de servire</p></div></div>
+            <div class="spec-item"><div class="spec-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p class="spec-item__label">Structură</p><p class="spec-item__value">Structură zincată profilată la rece</p></div></div>
+          </div>
+          <div class="autorizatie-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fără autorizație de construcție</div>
+          <div class="product-card__info-strip">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livrare 7–14 zile lucrătoare</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Livrat gata montat</span>
+          </div>
+          <div class="romania-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Fabricat în România</div>
+          <div class="product-card__price-row">
+            <div>
+              <p class="product-card__price-label">Preț de la</p>
+              <div class="product-card__price-wrap"><span class="product-card__price">2.850</span><span class="product-card__price-currency"> €</span><span class="product-card__price-tax">fără TVA</span></div>
+            </div>
+              <p class="price-note">Prețul este pentru configurația standard fără grup sanitar. Opțiunile cu baie se calculează la cerere.</p>
+            <a href="containere-comerciale/container-comercial-kiosk-oblon.html" class="btn btn--primary">
+              Detalii & ofertă
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--blue" id="cerere-oferta">
+    <div class="container">
+      <div class="form-split">
+        <div class="form-split__left reveal">
+          <span class="eyebrow" style="color:rgba(245,161,0,0.85)">Contact rapid</span>
+          <h2 class="section__title section__title--white">Interesat de<br>containere comerciale?</h2>
+          <p class="section__desc section__desc--white" style="margin-bottom:32px">Lasă-ne numărul de telefon și te sunăm noi în maximum 48 de ore cu toate detaliile și prețul final.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>Te sunăm în 48 de ore</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Ofertă fără angajament</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Răspuns rapid garantat</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span>Livrare în 7–14 zile lucrătoare</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-split__right reveal reveal-d2">
+          <form class="form" id="contact-form">
+            <input type="hidden" name="produs" value="Containere comerciale">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="nume">Nume și prenume *</label>
+                <input type="text" id="nume" name="nume" required placeholder="Ion Popescu">
+              </div>
+              <div class="form__group">
+                <label for="telefon">Telefon *</label>
+                <input type="tel" id="telefon" name="telefon" required placeholder="07xx xxx xxx">
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="locatie">Locație livrare *</label>
+              <input type="text" id="locatie" name="locatie" required placeholder="ex: București, sector 1 / Cluj-Napoca...">
+            </div>
+            <div class="form__group">
+              <label for="mesaj">Mesaj (opțional)</label>
+              <textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne ce întrebări ai sau detalii despre proiect..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              Trimite cererea
+              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form__status" id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/CU.webp" alt="CUBOX" class="footer__logo">
+          <p>Containere modulare personalizate.<br>Fabricate în România.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Produse</h4>
+          <div class="footer__links">
+            <a href="containere-modulare.html">Containere modulare</a>
+            <a href="containere-comerciale.html">Containere comerciale</a>
+            <a href="containere-maritime.html">Containere maritime</a>
+            <a href="inchiriere.html">Închiriere containere</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact & Legal</h4>
+          <div class="footer__links">
+            <a href="#cerere-oferta">Cere ofertă gratuită</a>
+            <a href="index.html#cum-functioneaza">Cum funcționează</a>
+            <a href="politica-confidentialitate.html">Politică de confidențialitate</a>
+            <a href="termeni-si-conditii.html">Termeni și condiții</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CUBOX. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#cerere-oferta" class="btn btn--primary btn--full">Cere ofertă gratuită</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/cookie-consent.js"></script></body>
+</html>
+
+

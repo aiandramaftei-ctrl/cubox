@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Container Modular cu Terasă 3 m | 6 × 5,4 m — CUBOX</title>
+<meta name="description" content="Fișă tehnică container modular cu terasă 3 m. Suprafață totală 32,4 m² (interior 14,4 m² + terasă 18 m²). Riflaje verticale sau finisaj gri-alb. Deck pin nordic, structură zincată. CUBOX — fabricat la comandă.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   CUBOX · Container Modular cu Terasă 3 m · 6×5,4 m
+   Paletă: cream editorial · navy structural · orange acțiune
+   ========================================================= */
+
+:root {
+  --c-navy: #0D2849;
+  --c-navy-soft: #1B3A6B;
+  --c-orange: #ED5E16;
+  --c-orange-hover: #D14A0A;
+  --c-orange-tint: #FFEDDD;
+
+  --c-bg: #FAF6EA;
+  --c-bg-warm: #F4ECD8;
+  --c-surface: #FFFFFF;
+  --c-cream: #ECE0C5;
+  --c-cream-deep: #DDD0B0;
+
+  --c-ink: #15151A;
+  --c-text: #1F1F26;
+  --c-text-mid: #4D4D58;
+  --c-text-muted: #7A7A85;
+  --c-border: rgba(13, 40, 73, 0.10);
+  --c-border-strong: rgba(13, 40, 73, 0.20);
+
+  --font-display: "Bricolage Grotesque", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+
+  --maxw: 1280px;
+  --pad-section: clamp(64px, 9vw, 128px);
+  --pad-x: clamp(20px, 5vw, 56px);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 1px 2px rgba(13, 40, 73, 0.04), 0 1px 3px rgba(13, 40, 73, 0.06);
+  --shadow-md: 0 4px 6px rgba(13, 40, 73, 0.04), 0 12px 32px rgba(13, 40, 73, 0.08);
+  --shadow-lg: 0 24px 60px rgba(13, 40, 73, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad-x);
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--c-ink);
+}
+
+.brand__tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid var(--c-border-strong);
+  color: var(--c-ink);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topbar__download:hover {
+  background: var(--c-ink);
+  color: #fff;
+  border-color: var(--c-ink);
+  transform: translateY(-1px);
+}
+
+.topbar__download svg { width: 16px; height: 16px; }
+
+.topbar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: var(--c-orange);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.topbar__cta:hover {
+  background: var(--c-orange-hover);
+  transform: translateY(-1px);
+}
+
+.topbar__cta svg { width: 16px; height: 16px; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  padding-top: clamp(56px, 8vw, 112px);
+  padding-bottom: clamp(72px, 9vw, 128px);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top right, rgba(237, 94, 22, 0.06) 0%, transparent 50%),
+    var(--c-bg);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(13, 40, 73, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 40, 73, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px 7px 8px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-ink);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero__eyebrow__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--c-orange);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 5.5vw, 72px);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  margin-bottom: 28px;
+  color: var(--c-ink);
+}
+
+.hero__title strong { font-weight: 800; }
+.hero__title em { font-style: normal; color: var(--c-orange); display: inline-block; }
+
+.hero__subtitle {
+  font-size: clamp(16px, 1.4vw, 19px);
+  color: var(--c-text-mid);
+  max-width: 540px;
+  margin-bottom: 32px;
+  line-height: 1.55;
+}
+
+.hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-text);
+  letter-spacing: 0.02em;
+}
+
+.badge--solid {
+  background: var(--c-navy);
+  border-color: var(--c-navy);
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+}
+
+.btn--primary { background: var(--c-orange); color: #fff; }
+.btn--primary:hover { background: var(--c-orange-hover); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(237, 94, 22, 0.32); }
+
+.btn--outline { background: var(--c-surface); border-color: var(--c-border-strong); color: var(--c-ink); }
+.btn--outline:hover { background: var(--c-navy); border-color: var(--c-navy); color: #fff; transform: translateY(-2px); }
+
+.btn--cta-ghost { background: transparent; border-color: rgba(255,255,255,0.25); color: #fff; }
+.btn--cta-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.45); }
+
+.btn svg { width: 18px; height: 18px; }
+
+.hero__visual {
+  position: relative;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__visual::before {
+  content: "6,00 × 5,40 m";
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.hero__visual::after {
+  content: "Terasă 3 m";
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.hero__visual img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: var(--radius-md);
+}
+
+/* =========================================================
+   KEY SPECS
+   ========================================================= */
+.keyspecs {
+  background: var(--c-bg-warm);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.keyspecs__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.keyspec {
+  padding: 40px 28px;
+  border-right: 1px solid var(--c-border);
+  position: relative;
+}
+
+.keyspec:last-child { border-right: none; }
+
+.keyspec__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-orange);
+  margin-bottom: 12px;
+}
+
+.keyspec__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 2.8vw, 38px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--c-ink);
+}
+
+.keyspec__unit {
+  font-size: 0.55em;
+  color: var(--c-text-muted);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.keyspec__hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   SECȚIUNI GENERICE
+   ========================================================= */
+section.block { padding-block: var(--pad-section); }
+.block--warm { background: var(--c-bg-warm); }
+
+.section-head { margin-bottom: 56px; max-width: 760px; }
+
+.section-head__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-orange);
+  margin-bottom: 18px;
+}
+
+.section-head__eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: var(--c-orange);
+}
+
+.section-head__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  color: var(--c-ink);
+  margin-bottom: 18px;
+}
+
+.section-head__sub {
+  font-size: 17px;
+  color: var(--c-text-mid);
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+/* =========================================================
+   SPECIFICAȚII
+   ========================================================= */
+.specs-card {
+  background: var(--c-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.specs-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.specs-col { border-right: 1px solid var(--c-border); }
+.specs-col:last-child { border-right: none; }
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 32px;
+  gap: 20px;
+  border-bottom: 1px solid var(--c-border);
+  transition: background 0.2s ease;
+}
+
+.spec-row:last-child { border-bottom: none; }
+.spec-row:hover { background: var(--c-bg); }
+
+.spec-row__label { font-weight: 600; color: var(--c-ink); font-size: 15px; }
+
+.spec-row__value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text-mid);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.specs-note {
+  background: var(--c-orange-tint);
+  padding: 22px 28px;
+  border-radius: var(--radius-md);
+  margin-top: 28px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-left: 3px solid var(--c-orange);
+}
+
+.specs-note__icon { flex-shrink: 0; width: 22px; height: 22px; color: var(--c-orange); margin-top: 2px; }
+.specs-note__text { font-size: 14px; color: var(--c-text); line-height: 1.6; }
+.specs-note__text strong { color: var(--c-ink); font-weight: 700; }
+
+/* =========================================================
+   CONSTRUCȚIE
+   ========================================================= */
+.construction__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: start;
+}
+
+.construction__visual {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.construction__visual img { width: 100%; border-radius: var(--radius-md); }
+
+.construction__tag {
+  position: absolute;
+  bottom: 44px;
+  left: 44px;
+  background: var(--c-ink);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.feature-group { margin-bottom: 36px; }
+.feature-group:last-child { margin-bottom: 0; }
+
+.feature-group__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  color: var(--c-ink);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.feature-group__title::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--c-orange);
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-list li {
+  display: flex;
+  gap: 14px;
+  font-size: 15.5px;
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--c-navy);
+  border-radius: 50%;
+  margin-top: 9px;
+}
+
+/* =========================================================
+   UTILIZĂRI
+   ========================================================= */
+.usecases__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.usecase {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.usecase:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c-border-strong); }
+
+.usecase__num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--c-orange);
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.usecase__icon {
+  width: 52px;
+  height: 52px;
+  background: var(--c-bg-warm);
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  color: var(--c-navy);
+  margin-bottom: 24px;
+}
+
+.usecase__icon svg { width: 28px; height: 28px; }
+.usecase__title { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -0.015em; margin-bottom: 12px; color: var(--c-ink); }
+.usecase__desc { font-size: 15px; color: var(--c-text-mid); line-height: 1.6; }
+
+/* =========================================================
+   AVANTAJE
+   ========================================================= */
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.advantage {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  transition: all 0.3s ease;
+}
+
+.advantage:hover { border-color: var(--c-orange); transform: translateY(-4px); box-shadow: 0 16px 36px rgba(237, 94, 22, 0.12); }
+.advantage__num { font-family: var(--font-display); font-size: 44px; font-weight: 800; color: var(--c-orange); letter-spacing: -0.03em; line-height: 1; margin-bottom: 28px; }
+.advantage__title { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -0.015em; margin-bottom: 12px; color: var(--c-ink); line-height: 1.2; }
+.advantage__desc { font-size: 15px; color: var(--c-text-mid); line-height: 1.6; }
+
+/* =========================================================
+   GALERIE VARIANTE DE CULOARE
+   ========================================================= */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.gallery__item {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery__label {
+  padding: 14px 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-text-mid);
+  letter-spacing: 0.04em;
+  border-top: 1px solid var(--c-border);
+}
+
+/* =========================================================
+   PANOURI (execuție + montaj)
+   ========================================================= */
+.twocol__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.panel__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.panel__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--c-bg-warm);
+  display: grid;
+  place-items: center;
+  color: var(--c-navy);
+  flex-shrink: 0;
+}
+
+.panel__icon svg { width: 24px; height: 24px; }
+.panel__title { font-family: var(--font-display); font-weight: 700; font-size: 21px; letter-spacing: -0.015em; color: var(--c-ink); line-height: 1.2; }
+
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+
+.check-list li {
+  display: flex;
+  gap: 14px;
+  font-size: 15.5px;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.check-list li svg { flex-shrink: 0; width: 22px; height: 22px; color: var(--c-orange); margin-top: 1px; }
+
+/* =========================================================
+   LIMITĂRI
+   ========================================================= */
+.limitations__card {
+  background: var(--c-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-orange);
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.limitations__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.limitations__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--c-orange-tint);
+  display: grid;
+  place-items: center;
+  color: var(--c-orange);
+}
+
+.limitations__icon svg { width: 28px; height: 28px; }
+.limitations__title { font-family: var(--font-display); font-weight: 700; font-size: 28px; letter-spacing: -0.022em; color: var(--c-ink); margin-bottom: 6px; line-height: 1.15; }
+.limitations__sub { font-size: 15px; color: var(--c-text-mid); }
+
+.limitations__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.limitations__list li {
+  display: flex;
+  gap: 14px;
+  padding: 20px 22px;
+  background: var(--c-bg-warm);
+  border-radius: var(--radius-md);
+  font-size: 14.5px;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.limitations__list li::before { content: "—"; color: var(--c-orange); font-weight: 700; flex-shrink: 0; }
+
+/* =========================================================
+   PERSONALIZARE
+   ========================================================= */
+.customize__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.custom-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.custom-card:hover { border-color: var(--c-orange); transform: translateY(-3px); box-shadow: 0 14px 32px rgba(237, 94, 22, 0.10); }
+.custom-card__num { font-family: var(--font-mono); font-size: 12px; color: var(--c-orange); font-weight: 600; letter-spacing: 0.08em; margin-bottom: 18px; text-transform: uppercase; }
+.custom-card__title { font-family: var(--font-display); font-weight: 700; font-size: 19px; margin-bottom: 12px; color: var(--c-ink); letter-spacing: -0.012em; line-height: 1.25; }
+.custom-card__desc { font-size: 14.5px; color: var(--c-text-mid); line-height: 1.6; }
+
+/* =========================================================
+   CTA
+   ========================================================= */
+.cta-section {
+  background: var(--c-ink);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: clamp(56px, 7vw, 96px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-block: var(--pad-section);
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(237, 94, 22, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-section__inner { position: relative; z-index: 1; max-width: 760px; margin-inline: auto; }
+.cta-section__eyebrow { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-orange); margin-bottom: 20px; }
+.cta-section__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.02; letter-spacing: -0.028em; margin-bottom: 22px; color: #fff; }
+.cta-section__sub { font-size: 17px; color: rgba(255, 255, 255, 0.78); margin-bottom: 38px; line-height: 1.55; }
+.cta-section__buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+.cta-states {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.cta-states__label { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+.cta-states__list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+.cta-state {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+  font-weight: 500;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background: var(--c-bg-warm);
+  border-top: 1px solid var(--c-border);
+  padding-block: 48px;
+  font-size: 13px;
+  color: var(--c-text-mid);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.footer h4 { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--c-ink); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+.footer p { line-height: 1.7; color: var(--c-text-mid); }
+.footer__copy { text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--c-text-muted); letter-spacing: 0.04em; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 980px) {
+  .hero__grid, .construction__grid { grid-template-columns: 1fr; }
+  .hero__visual { order: -1; }
+  .keyspecs__grid { grid-template-columns: 1fr 1fr; }
+  .keyspec:nth-child(2) { border-right: none; }
+  .keyspec:nth-child(1), .keyspec:nth-child(2) { border-bottom: 1px solid var(--c-border); }
+  .specs-grid { grid-template-columns: 1fr; }
+  .specs-col { border-right: none; border-bottom: 1px solid var(--c-border); }
+  .specs-col:last-child { border-bottom: none; }
+  .usecases__grid, .advantages__grid, .customize__grid, .gallery__grid { grid-template-columns: 1fr; }
+  .twocol__grid { grid-template-columns: 1fr; }
+  .limitations__list { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .topbar__cta span { display: none; }
+  .topbar__download span { display: none; }
+  .topbar__download { padding: 10px 12px; }
+  .keyspecs__grid { grid-template-columns: 1fr; }
+  .keyspec { border-right: none; border-bottom: 1px solid var(--c-border); }
+  .keyspec:last-child { border-bottom: none; }
+  .spec-row { padding: 18px 22px; }
+  .spec-row__value { font-size: 13px; }
+  .panel, .limitations__card { padding: 28px 24px; }
+  .hero__title { font-size: 40px; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .brand__tag { display: none; }
+}
+
+/* =========================================================
+   ANIMAȚII
+   ========================================================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__eyebrow, .hero__title, .hero__subtitle, .hero__badges, .hero__actions { animation: fadeUp 0.7s ease backwards; }
+.hero__title { animation-delay: 0.05s; }
+.hero__subtitle { animation-delay: 0.15s; }
+.hero__badges { animation-delay: 0.25s; }
+.hero__actions { animation-delay: 0.35s; }
+.hero__visual { animation: fadeUp 0.9s ease 0.2s backwards; }
+
+/* =========================================================
+   @MEDIA PRINT
+   ========================================================= */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.8cm 1cm 1.4cm 1cm;
+    @top-left { content: "CUBOX"; font-family: "Bricolage Grotesque", Georgia, serif; font-weight: 800; font-size: 11pt; color: #0D2849; letter-spacing: -0.02em; padding-bottom: 6pt; vertical-align: bottom; }
+    @top-right { content: "Container Modular cu Terasă · 6 × 5,4 m"; font-family: "JetBrains Mono", monospace; font-size: 8pt; color: #7A7A85; letter-spacing: 0.04em; padding-bottom: 6pt; vertical-align: bottom; }
+    @bottom-center { content: "Pagina " counter(page) " / " counter(pages); font-family: "JetBrains Mono", monospace; font-size: 8pt; color: #7A7A85; letter-spacing: 0.04em; }
+  }
+  @page :first { @top-left { content: ""; } @top-right { content: ""; } }
+
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; box-shadow: none !important; animation: none !important; transition: none !important; }
+  html, body { background: #fff !important; font-size: 10pt; }
+  .topbar__actions, .hero__actions, .cta-section__buttons { display: none !important; }
+  .topbar { position: static !important; background: #fff !important; backdrop-filter: none !important; border-bottom: 1px solid var(--c-border) !important; }
+  .topbar__inner { padding-block: 8pt !important; }
+  .brand img { width: 36pt !important; height: 36pt !important; }
+  .brand__name { font-size: 16pt !important; }
+  section.block { padding-block: 18pt !important; page-break-inside: avoid; }
+  .hero { padding-block: 20pt !important; background: #fff !important; }
+  .hero::before { display: none !important; }
+  .hero__grid { grid-template-columns: 1fr 1fr !important; gap: 24pt !important; }
+  .construction__grid { grid-template-columns: 1fr 1fr !important; gap: 24pt !important; }
+  .specs-grid { grid-template-columns: 1fr !important; }
+  .specs-col { border-right: none !important; border-bottom: 1px solid var(--c-border) !important; }
+  .specs-col:last-child { border-bottom: none !important; }
+  .spec-row { padding: 9pt 14pt !important; }
+  .usecases__grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10pt !important; }
+  .advantages__grid, .customize__grid { grid-template-columns: repeat(3, 1fr) !important; gap: 10pt !important; }
+  .twocol__grid { grid-template-columns: 1fr 1fr !important; gap: 12pt !important; }
+  .limitations__list { grid-template-columns: 1fr 1fr !important; gap: 8pt !important; }
+  .gallery__grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8pt !important; }
+  .gallery__item img { height: 140px !important; }
+  .cta-section { background: var(--c-bg-warm) !important; color: var(--c-ink) !important; border: 1px solid var(--c-border) !important; page-break-inside: avoid; }
+  .cta-section * { color: var(--c-ink) !important; }
+  .cta-section::before { display: none !important; }
+  .cta-section__eyebrow { color: var(--c-orange) !important; }
+  .cta-state { background: #fff !important; border-color: var(--c-border) !important; color: var(--c-text) !important; }
+  .cta-states { border-top-color: var(--c-border) !important; }
+  .footer { background: #fff !important; }
+  .section-head { page-break-after: avoid; }
+  .specs-card, .panel, .limitations__card, .usecase, .advantage, .custom-card, .gallery__item { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== BARĂ SUS ==================== -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="../../../containere-modulare.html" class="brand">
+      <img src="../CONTINER MARITIM FISA/assets/cubox-logo.jpg" alt="CUBOX">
+      <div class="brand__text">
+        <span class="brand__name">CUBOX</span>
+        <span class="brand__tag">Containere · Vânzare · Închiriere</span>
+      </div>
+    </a>
+    <div class="topbar__actions">
+      <button onclick="window.print(); return false;" class="topbar__download" type="button" aria-label="Descarcă fișa tehnică în PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Descarcă PDF</span>
+      </button>
+      <a href="../../../index.html?produs=Containere%20modulare#cerere-oferta" class="topbar__cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Cere ofertă</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <span class="hero__eyebrow">
+        <span class="hero__eyebrow__dot">6×5</span>
+        Container modular · Terasă 3 m
+      </span>
+      <h1 class="hero__title">
+        <strong>Container Modular</strong><br>
+        cu <em>Terasă</em> 3 m
+      </h1>
+      <p class="hero__subtitle">
+        Fișă tehnică pentru container modular cu terasă extinsă de 3 m. Spațiu interior 6 × 2,4 m și terasă acoperită 6 × 3,0 m, disponibil cu riflaje verticale aspect lemn sau finisaj gri-alb.
+      </p>
+      <div class="hero__badges">
+        <span class="badge badge--solid">6 × 5,4 m</span>
+        <span class="badge">32,4 m² total</span>
+        <span class="badge">terasă 3 m</span>
+        <span class="badge">deck pin nordic</span>
+        <span class="badge">fabricat la comandă</span>
+      </div>
+      <div class="hero__actions">
+        <a href="../../../index.html?produs=Containere%20modulare#cerere-oferta" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+          Cere ofertă personalizată
+        </a>
+        <a href="#specs" class="btn btn--outline">
+          Vezi specificațiile complete
+        </a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj-randare.webp" alt="Container modular cu terasă 3 m — 6×5,4 m, gri antracit cu riflaje verticale">
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BANDĂ CIFRE-CHEIE ==================== -->
+<section class="keyspecs">
+  <div class="container">
+    <div class="keyspecs__grid">
+      <div class="keyspec">
+        <div class="keyspec__label">Lungime front</div>
+        <div class="keyspec__value">6,00 <span class="keyspec__unit">m</span></div>
+        <div class="keyspec__hint">cu acces central</div>
+      </div>
+      <div class="keyspec">
+        <div class="keyspec__label">Adâncime totală</div>
+        <div class="keyspec__value">5,40 <span class="keyspec__unit">m</span></div>
+        <div class="keyspec__hint">2,4 m interior + 3,0 m terasă</div>
+      </div>
+      <div class="keyspec">
+        <div class="keyspec__label">Înălțime</div>
+        <div class="keyspec__value">2,55 <span class="keyspec__unit">m</span></div>
+        <div class="keyspec__hint">corp închis</div>
+      </div>
+      <div class="keyspec">
+        <div class="keyspec__label">Amprentă totală</div>
+        <div class="keyspec__value">32,40 <span class="keyspec__unit">m²</span></div>
+        <div class="keyspec__hint">include terasa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SPECIFICAȚII COMPLETE ==================== -->
+<section class="block" id="specs">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">01 · Specificații tehnice</span>
+      <h2 class="section-head__title">Toate dimensiunile, într-un singur loc.</h2>
+      <p class="section-head__sub">
+        Configurație formată dintr-un corp interior închis de 6 × 2,4 m și o terasă acoperită extinsă de 6 × 3,0 m, integrate în același volum.
+      </p>
+    </div>
+
+    <div class="specs-card">
+      <div class="specs-grid">
+        <div class="specs-col">
+          <div class="spec-row">
+            <span class="spec-row__label">Suprafață interioară</span>
+            <span class="spec-row__value">14,40 m² (6 × 2,4 m)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Suprafață terasă</span>
+            <span class="spec-row__value">18,00 m² (6 × 3,0 m)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Amprentă totală</span>
+            <span class="spec-row__value">32,40 m²</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Lungime front</span>
+            <span class="spec-row__value">6,00 m</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Adâncime totală</span>
+            <span class="spec-row__value">5,40 m</span>
+          </div>
+        </div>
+        <div class="specs-col">
+          <div class="spec-row">
+            <span class="spec-row__label">Corp interior</span>
+            <span class="spec-row__value">2,40 m adâncime</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Terasă acoperită</span>
+            <span class="spec-row__value">3,00 m adâncime</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Înălțime totală</span>
+            <span class="spec-row__value">2,55 m</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Balustradă / riflaje</span>
+            <span class="spec-row__value">orientativ 1,00 m</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Configurație</span>
+            <span class="spec-row__value">extinsă · personalizabilă</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specs-note">
+      <svg class="specs-note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="16" x2="12" y2="12"/>
+        <line x1="12" y1="8" x2="12.01" y2="8"/>
+      </svg>
+      <div class="specs-note__text">
+        <strong>Notă de configurare.</strong> Dimensiunile sunt orientative. Configurația finală — inclusiv cota deck-ului, panta, drenajul și fixarea riflajelor — se stabilește pe schița de producție și în funcție de teren, utilizare și expunere.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONSTRUCȚIE ==================== -->
+<section class="block block--warm">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">02 · Construcție și materiale</span>
+      <h2 class="section-head__title">Structură solidă, terasă generoasă.</h2>
+    </div>
+
+    <div class="construction__grid">
+      <div class="construction__visual">
+        <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj.webp" alt="Container modular cu terasă 3 m — gri antracit cu riflaje verticale, vedere frontală">
+        <span class="construction__tag">6 × 5,4 m · terasă 3 m</span>
+      </div>
+      <div>
+        <div class="feature-group">
+          <h3 class="feature-group__title">Structură metalică și acoperiș</h3>
+          <ul class="feature-list">
+            <li>Structură zincată profilată la rece, grosime 2 mm, cu protecție antirugină și vopsire în două straturi: grund și vopsea poliuretanică.</li>
+            <li>Acoperiș comun peste corpul închis și zona de terasă, cu canal de drenare, folie anticondens și izolație.</li>
+          </ul>
+        </div>
+        <div class="feature-group">
+          <h3 class="feature-group__title">Pereți, pardoseli și terasă</h3>
+          <ul class="feature-list">
+            <li>Pereți zona închisă: panouri sandwich 40 mm cu miez poliuretanic; finisaj exterior cu riflaje verticale aspect lemn sau panouri gri-alb la cerere.</li>
+            <li>Pardoseală interioară: tablă zincată H12, lonjeroane 2 mm, OSB 18 mm, finisaj linoleum sau PVC la cerere.</li>
+            <li>Pardoseală terasă 3 m: grinzi metalice pentru suport și rigidizare, deck exterior din pin nordic tratat.</li>
+            <li>Balustradă frontală cu riflaje/lamele decorative pe cadru metalic, orientativ 1 m înălțime.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== UTILIZĂRI ==================== -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">03 · Utilizări recomandate</span>
+      <h2 class="section-head__title">Spațiu mai mare, mai multe posibilități.</h2>
+    </div>
+
+    <div class="usecases__grid">
+      <div class="usecase">
+        <span class="usecase__num">01 · Locuire</span>
+        <div class="usecase__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="usecase__title">Cazare și vacanță</h3>
+        <p class="usecase__desc">Terasa extinsă de 3 m creează un spațiu de relaxare generos — ideal pentru case de vacanță, cabane sau unități de cazare premium.</p>
+      </div>
+
+      <div class="usecase">
+        <span class="usecase__num">02 · Birou</span>
+        <div class="usecase__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="usecase__title">Birou cu terasă</h3>
+        <p class="usecase__desc">Spațiu de lucru cu zonă exterioară generoasă pentru întâlniri, pauze sau recepție clienți în aer liber.</p>
+      </div>
+
+      <div class="usecase">
+        <span class="usecase__num">03 · Comercial</span>
+        <div class="usecase__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
+        <h3 class="usecase__title">Showroom și recepție</h3>
+        <p class="usecase__desc">Spațiu comercial cu terasă de expunere sau recepție — showroom cu zonă demonstrativă exterioară, ușor de relocat.</p>
+      </div>
+
+      <div class="usecase">
+        <span class="usecase__num">04 · HoReCa</span>
+        <div class="usecase__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <line x1="6" y1="1" x2="6" y2="4"/>
+            <line x1="10" y1="1" x2="10" y2="4"/>
+            <line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <h3 class="usecase__title">Terasă HoReCa</h3>
+        <p class="usecase__desc">Coffee corner, restaurant compact sau pavilion HoReCa cu terasă de servire generoasă de 18 m².</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AVANTAJE ==================== -->
+<section class="block block--warm">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">04 · De ce să-l alegi</span>
+      <h2 class="section-head__title">Avantaje principale.</h2>
+    </div>
+    <div class="advantages__grid">
+      <div class="advantage">
+        <div class="advantage__num">01</div>
+        <h3 class="advantage__title">Terasă extinsă de 18 m²</h3>
+        <p class="advantage__desc">Cu 3 m adâncime, terasa oferă un spațiu exterior utilizabil semnificativ față de varianta compactă de 2,4 m.</p>
+      </div>
+      <div class="advantage">
+        <div class="advantage__num">02</div>
+        <h3 class="advantage__title">Finisaj premium aspect lemn</h3>
+        <p class="advantage__desc">Riflaje verticale, deck din pin nordic tratat și tâmplărie gri antracit pentru aspect modern și durabil.</p>
+      </div>
+      <div class="advantage">
+        <div class="advantage__num">03</div>
+        <h3 class="advantage__title">Configurație personalizabilă</h3>
+        <p class="advantage__desc">Culoare structură, tip finisaj, poziționare goluri, ferestre, uși glisante, AC și iluminat la cerere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VARIANTE DISPONIBILE ==================== -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">05 · Variante disponibile</span>
+      <h2 class="section-head__title">Același tipar, în două finisaje.</h2>
+      <p class="section-head__sub">
+        Containerul cu terasă 3 m este disponibil cu riflaje verticale aspect lemn sau în varianta gri-alb cu panouri sandwich standard. Mai jos sunt ambele variante.
+      </p>
+    </div>
+
+    <div class="gallery__grid">
+      <div class="gallery__item">
+        <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj.webp" alt="Container modular cu terasă 3 m — gri antracit cu riflaje verticale">
+        <div class="gallery__label">Gri antracit cu riflaje verticale</div>
+      </div>
+      <div class="gallery__item">
+        <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj-randare.webp" alt="Container modular cu terasă 3 m — randare gri antracit cu riflaje">
+        <div class="gallery__label">Gri antracit cu riflaje — randare</div>
+      </div>
+      <div class="gallery__item">
+        <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri alb/Continere modulare-6x2.4 cu terasa 3 m-gri alb.webp" alt="Container modular cu terasă 3 m — variantă gri-alb">
+        <div class="gallery__label">Gri / alb</div>
+      </div>
+      <div class="gallery__item">
+        <img src="../../CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri alb/Continere modulare-6x2.4 cu terasa 3 m-gri alb-randare.webp" alt="Container modular cu terasă 3 m — randare gri-alb">
+        <div class="gallery__label">Gri / alb — randare</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EXECUȚIE ==================== -->
+<section class="block block--warm">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">06 · Execuție și instalare</span>
+      <h2 class="section-head__title">Ce se stabilește înainte de fabricare.</h2>
+    </div>
+    <div class="twocol__grid">
+      <div class="panel">
+        <div class="panel__head">
+          <div class="panel__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <h3 class="panel__title">Ce se stabilește pe schiță</h3>
+        </div>
+        <ul class="check-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Poziționarea golurilor: ferestre, uși glisante, accese laterale sau frontale.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Finisajul exterior: tip riflaje, culoarea structurii, panouri sandwich gri-alb.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Instalația electrică, iluminatul și traseele pentru AC — calculate separat.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cota deck-ului, panta, drenajul și fixarea riflajelor în funcție de teren.
+          </li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel__head">
+          <div class="panel__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"/>
+              <path d="M5 21V7l8-4v18"/>
+              <path d="M19 21V11l-6-4"/>
+            </svg>
+          </div>
+          <h3 class="panel__title">Transport și montaj</h3>
+        </div>
+        <ul class="check-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Transportul și montajul se calculează în funcție de amplasament și accesibilitate.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Ridicarea cu macara sau montaj direct — stabilite după vizita pe amplasament.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Verificare periodică recomandată a deck-ului și a elementelor din lemn expuse.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LIMITĂRI ==================== -->
+<section class="block">
+  <div class="container">
+    <div class="limitations__card">
+      <div class="limitations__head">
+        <div class="limitations__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="limitations__title">De știut înainte de comandă</h2>
+          <p class="limitations__sub">Onestitate tehnică — fără surprize după livrare.</p>
+        </div>
+      </div>
+      <ul class="limitations__list">
+        <li>Zona de terasă este o componentă exterioară expusă la intemperii; deck-ul din lemn necesită tratare și întreținere periodică.</li>
+        <li>Dimensiunile din fișă sunt orientative; configurația finală se stabilește pe schița de producție.</li>
+        <li>Instalația electrică, iluminatul și AC-ul nu sunt incluse în configurația de bază.</li>
+        <li>Nu include instalație sanitară în configurația standard — grup sanitar cu lavoar, WC și duș se adaugă prin proiectare dedicată.</li>
+        <li>Prețul și termenul de execuție se confirmă după aprobarea planului și a detaliilor de amplasament.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PERSONALIZARE ==================== -->
+<section class="block block--warm">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__eyebrow">07 · Opțiuni de personalizare</span>
+      <h2 class="section-head__title">Adaptăm containerul după nevoia ta.</h2>
+    </div>
+    <div class="customize__grid">
+      <div class="custom-card">
+        <div class="custom-card__num">A · Structură și culoare</div>
+        <h3 class="custom-card__title">Culoare RAL și finisaje</h3>
+        <p class="custom-card__desc">Gri antracit, alb sau orice culoare RAL la cerere. Riflaje verticale aspect lemn sau panouri sandwich standard.</p>
+      </div>
+      <div class="custom-card">
+        <div class="custom-card__num">B · Tâmplărie și acces</div>
+        <h3 class="custom-card__title">Uși glisante și ferestre</h3>
+        <p class="custom-card__desc">Uși glisante cu vitrare mare, ferestre laterale sau frontale, obloane de securitate — definite pe schița de producție.</p>
+      </div>
+      <div class="custom-card">
+        <div class="custom-card__num">C · Instalație sanitară</div>
+        <h3 class="custom-card__title">Grup sanitar la comandă</h3>
+        <p class="custom-card__desc">Lavoar, WC și duș — disponibile opțional prin proiectare dedicată, în funcție de racordurile și amplasamentul ales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<div class="container" id="cta">
+  <section class="cta-section">
+    <div class="cta-section__inner">
+      <div class="cta-section__eyebrow">Fabricat la comandă</div>
+      <h2 class="cta-section__title">Cere ofertă pentru containerul tău cu terasă.</h2>
+      <p class="cta-section__sub">
+        Spune-ne configurația dorită — îți pregătim oferta în maximum 24 de ore, cu disponibilitate, transport și opțiuni de personalizare.
+      </p>
+      <div class="cta-section__buttons">
+        <a href="../../../index.html?produs=Containere%20modulare#cerere-oferta" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Trimite cerere de ofertă
+        </a>
+        <a href="tel:+40700000000" class="btn btn--cta-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Sună-ne acum
+        </a>
+      </div>
+      <div class="cta-states">
+        <span class="cta-states__label">Variante disponibile</span>
+        <div class="cta-states__list">
+          <span class="cta-state">Gri antracit cu riflaje</span>
+          <span class="cta-state">Gri / alb</span>
+          <span class="cta-state">Culori RAL la cerere</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <h4>Configurație prezentată</h4>
+        <p>Container modular cu terasă 3 m, 6 × 5,4 m total, cu corp interior 6 × 2,4 m (structură zincată, panouri sandwich 40 mm, pardoseală OSB + linoleum) și terasă acoperită 6 × 3,0 m (deck pin nordic, grinzi metalice, riflaje verticale decorative).</p>
+      </div>
+      <div>
+        <h4>Disclaimer</h4>
+        <p>Imaginile sunt randări de prezentare. Această fișă prezintă configurația standard. Finisajele, tipul riflajelor, dotările și configurația golurilor se stabilesc după confirmarea planului de producție. Specificațiile pot fi adaptate în funcție de configurația finală.</p>
+      </div>
+    </div>
+    <div class="footer__copy">
+      © CUBOX · Container Modular cu Terasă 3 m · 6 × 5,4 m
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
