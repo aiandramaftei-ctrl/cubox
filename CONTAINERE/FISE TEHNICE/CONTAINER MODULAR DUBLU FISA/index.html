@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
@@ -506,7 +506,6 @@ section.block { padding-block: var(--pad-section); }
   font-weight: 500;
   color: var(--c-text-mid);
   text-align: right;
-  white-space: nowrap;
 }
 
 .specs-note {
@@ -698,8 +697,7 @@ section.block { padding-block: var(--pad-section); }
 
 .gallery__item img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
   object-position: center;
   display: block;
 }
@@ -946,8 +944,8 @@ section.block { padding-block: var(--pad-section); }
   .keyspecs__grid { grid-template-columns: 1fr; }
   .keyspec { border-right: none; border-bottom: 1px solid var(--c-border); }
   .keyspec:last-child { border-bottom: none; }
-  .spec-row { padding: 18px 22px; }
-  .spec-row__value { font-size: 13px; }
+  .spec-row { padding: 14px 22px; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .spec-row__value { font-size: 13px; text-align: left; }
   .panel, .limitations__card { padding: 28px 24px; }
   .hero__title { font-size: 44px; }
   .hero__actions { flex-direction: column; }
