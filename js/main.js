@@ -5,12 +5,27 @@ const iconMuted   = document.getElementById('icon-muted');
 const iconSound   = document.getElementById('icon-sound');
 
 if (video) {
-  // iOS Safari: autoplay attribute nu e suficient — trebuie play() explicit
-  const tryPlay = () => { const p = video.play(); if (p) p.catch(() => {}); };
+  const tryPlay = () => {
+    video.muted = true;
+    const p = video.play();
+    if (p) p.catch(() => {});
+  };
+
+  // Incearca imediat
   tryPlay();
-  if (video.paused) {
-    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+
+  // Retry dupa 300ms (iOS are nevoie de timp dupa load)
+  setTimeout(tryPlay, 300);
+
+  // Cand video intra in viewport (iOS nu autoplay off-screen)
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) tryPlay(); });
+    }, { threshold: 0.1 }).observe(video);
   }
+
+  // Fallback: primul touch pe pagina
+  document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
 }
 
 if (soundBtn && video) {

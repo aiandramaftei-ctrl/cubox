@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -90,8 +90,7 @@
 
     <!-- DREAPTA: video pur, fără nimic pe el -->
     <div class="hero__right">
-      <video class="hero__video" id="hero-video" autoplay muted loop playsinline preload="auto">
-        <source src="video-cubox-web.mp4" type="video/mp4">
+      <video class="hero__video" id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" src="video-cubox-web.mp4" type="video/mp4">
       </video>
       <button class="hero__sound" id="sound-toggle" aria-label="Activează sunetul">
         <svg id="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
@@ -1106,7 +1105,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
   <script>
     const scrollBtn = document.getElementById('scroll-top');
     window.addEventListener('scroll', () => {
