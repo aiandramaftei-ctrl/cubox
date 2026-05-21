@@ -4,6 +4,15 @@ const soundBtn    = document.getElementById('sound-toggle');
 const iconMuted   = document.getElementById('icon-muted');
 const iconSound   = document.getElementById('icon-sound');
 
+if (video) {
+  // iOS Safari: autoplay attribute nu e suficient — trebuie play() explicit
+  const tryPlay = () => { const p = video.play(); if (p) p.catch(() => {}); };
+  tryPlay();
+  if (video.paused) {
+    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+  }
+}
+
 if (soundBtn && video) {
   soundBtn.addEventListener('click', () => {
     video.muted = !video.muted;

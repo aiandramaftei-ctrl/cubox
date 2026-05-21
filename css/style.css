@@ -632,6 +632,11 @@ ul  { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  /* iOS Safari: fara asta video ruleaza dar frame-urile nu apar (background negru) */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Buton sunet — discret, colț dreapta-jos */
