@@ -2002,6 +2002,9 @@ ul  { list-style: none; }
 @media (max-width: 900px) {
   .product-card { grid-template-columns: 1fr; }
   .product-card__img { min-height: 300px; }
+  /* Specificitate (0,2,0) — câștigă față de <style> inline (0,1,0) din paginile produs */
+  .section .product-card { grid-template-columns: 1fr; }
+  .section .product-card__content { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
   /* Dezactivăm sticky imaginii — pe 1 coloană produce gap alb la scroll */
   .product-card > .product-card__img {
     position: relative;
@@ -2015,6 +2018,14 @@ ul  { list-style: none; }
   .product-card__price-row .btn { justify-content: center; }
   /* Info-strip: permite wrap pe mobile ca să nu se trunchieze textul */
   .product-card > .product-card__content .product-card__info-strip { flex-wrap: wrap; }
+  /* Hero video — ascuns pe mobile, înlocuit cu imagine container */
+  .hero__video { display: none; }
+  .hero__sound { display: none; }
+  .hero__right {
+    background-image: url('../CONTAINERE/CONTAINERE MODULARE/Container Modular - 6 x 2,4 m - gri antracit/Container modular - 6 x 2,4 m - gri - gri antracit - 2 ferestre- randare.webp');
+    background-size: cover;
+    background-position: center top;
+  }
 }
 @media (max-width: 768px) {
   .page-hero { margin-top: 68px; padding: 40px 0 36px; }
