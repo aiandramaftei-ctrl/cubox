@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage -->
   <url>
-    <loc>https://cubox.ro/</loc>
+    <loc>https://cuboxmodular.ro/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,25 +11,25 @@
 
   <!-- Listing pages -->
   <url>
-    <loc>https://cubox.ro/containere-modulare.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/inchiriere.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -37,67 +37,67 @@
 
   <!-- Containere modulare — pagini produs -->
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-6x24-alb.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-6x24-alb.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-6x24-gri.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-6x24-gri.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-6x24-color.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-6x24-color.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-dublu-6x48-alb.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-dublu-6x48-alb.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-dublu-6x48-gri.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-dublu-6x48-gri.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-dublu-6x48-color.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-dublu-6x48-color.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-terasa-gri-riflaj-24.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-terasa-gri-riflaj-24.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-terasa-gri-riflaj-3m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-terasa-gri-riflaj-3m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-terasa-gri-alb-3m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-terasa-gri-alb-3m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-dublu-terasa-gri-riflaj-3m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-dublu-terasa-gri-riflaj-3m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-modulare/container-modular-dublu-terasa-gri-alb-3m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-modulare/container-modular-dublu-terasa-gri-alb-3m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -105,43 +105,43 @@
 
   <!-- Containere comerciale — pagini produs -->
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-showroom-vitrina-alb.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-showroom-vitrina-alb.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-showroom-vitrina-gri.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-showroom-vitrina-gri.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-showroom-rollup.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-showroom-rollup.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-fastfood-oblon.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-fastfood-oblon.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-kiosk-oblon.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-kiosk-oblon.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-fastfood-riflaj-4x24.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-fastfood-riflaj-4x24.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-comerciale/container-comercial-fastfood-riflaj-6x3.html</loc>
+    <loc>https://cuboxmodular.ro/containere-comerciale/container-comercial-fastfood-riflaj-6x3.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -149,43 +149,43 @@
 
   <!-- Containere maritime — pagini produs -->
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-nou-6m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-nou-6m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-nou-6m-gri.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-nou-6m-gri.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-nou-6m-alb.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-nou-6m-alb.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-nou-6m-verde.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-nou-6m-verde.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-nou-12m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-nou-12m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-sh-6m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-sh-6m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/containere-maritime/maritim-sh-12m.html</loc>
+    <loc>https://cuboxmodular.ro/containere-maritime/maritim-sh-12m.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -193,31 +193,31 @@
 
   <!-- Inchiriere — pagini individuale -->
   <url>
-    <loc>https://cubox.ro/inchiriere/birou.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere/birou.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/inchiriere/depozitare.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere/depozitare.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/inchiriere/sanitar.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere/sanitar.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/inchiriere/frigorific.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere/frigorific.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/inchiriere/cabina-paza.html</loc>
+    <loc>https://cuboxmodular.ro/inchiriere/cabina-paza.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -225,13 +225,13 @@
 
   <!-- Alte pagini -->
   <url>
-    <loc>https://cubox.ro/proiecte.html</loc>
+    <loc>https://cuboxmodular.ro/proiecte.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/contact.html</loc>
+    <loc>https://cuboxmodular.ro/contact.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -239,12 +239,12 @@
 
 
   <url>
-    <loc>https://cubox.ro/politica-confidentialitate.html</loc>
+    <loc>https://cuboxmodular.ro/politica-confidentialitate.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://cubox.ro/termeni-si-conditii.html</loc>
+    <loc>https://cuboxmodular.ro/termeni-si-conditii.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
