@@ -9,6 +9,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  color-scheme: light;
   --blue:        #1B4FA8;
   --blue-dark:   #153d85;
   --blue-light:  #e8eef9;
