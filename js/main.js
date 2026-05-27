@@ -221,7 +221,7 @@ if (form) {
         form.reset();
       })
       .catch(() => {
-        status.textContent = '✗ Eroare la trimitere. Sună-ne direct la 0700 000 000.';
+        status.textContent = '✗ Eroare la trimitere. Sună-ne direct la 0728873857.';
         status.className = 'form__status error';
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
