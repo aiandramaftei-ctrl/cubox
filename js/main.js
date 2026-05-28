@@ -229,3 +229,39 @@ if (form) {
     }
   });
 }
+
+// === GA4 EVENTS ===
+function trackEvent(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params);
+}
+
+document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+  el.addEventListener('click', () => trackEvent('click_telefon', { event_category: 'contact' }));
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+  el.addEventListener('click', () => trackEvent('click_email', { event_category: 'contact' }));
+});
+
+if (form) {
+  form.addEventListener('submit', () => {
+    const produs = form.querySelector('[name="produs"]');
+    trackEvent('generate_lead', {
+      event_category: 'lead',
+      produs_interes: produs ? produs.value : ''
+    });
+  });
+}
+
+const ofertaSection = document.getElementById('cerere-oferta');
+if (ofertaSection) {
+  const fvObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        trackEvent('view_oferta_form', { event_category: 'engagement' });
+        fvObs.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  fvObs.observe(ofertaSection);
+}
