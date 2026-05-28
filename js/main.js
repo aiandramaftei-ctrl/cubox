@@ -204,11 +204,13 @@ if (form) {
     const formData = {
       nume:     form.querySelector('[name="nume"]')?.value || '',
       telefon:  form.querySelector('[name="telefon"]')?.value || '',
+      email:    form.querySelector('[name="email"]')?.value || 'noreply@cuboxmodular.ro',
       locatie:  form.querySelector('[name="locatie"]')?.value || '',
       mesaj:    form.querySelector('[name="mesaj"]')?.value || '',
       produs:   form.querySelector('[name="produs"]')?.value || '',
       _subject: 'Cerere nouă — cuboxmodular.ro',
       _template: 'table',
+      _replyto: form.querySelector('[name="email"]')?.value || '',
     };
 
     try {
