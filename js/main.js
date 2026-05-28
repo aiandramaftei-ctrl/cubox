@@ -201,23 +201,16 @@ if (form) {
     status.textContent = '';
     status.className = 'form__status';
 
-    const formData = {
-      nume:     form.querySelector('[name="nume"]')?.value || '',
-      telefon:  form.querySelector('[name="telefon"]')?.value || '',
-      email:    form.querySelector('[name="email"]')?.value || 'noreply@cuboxmodular.ro',
-      locatie:  form.querySelector('[name="locatie"]')?.value || '',
-      mesaj:    form.querySelector('[name="mesaj"]')?.value || '',
-      produs:   form.querySelector('[name="produs"]')?.value || '',
-      _subject: 'Cerere nouă — cuboxmodular.ro',
-      _template: 'table',
-      _replyto: form.querySelector('[name="email"]')?.value || '',
-    };
+    const data = new FormData(form);
+    data.append('_subject', 'Cerere nouă — cuboxmodular.ro');
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
 
     try {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
+        headers: { 'Accept': 'application/json' },
+        body: data
       });
       const json = await res.json();
       if (json.success === 'true' || json.success === true) {
