@@ -171,12 +171,8 @@ if (stickyCta && contactSection) {
   hideObserver.observe(contactSection);
 }
 
-// === EMAILJS CONFIG — înlocuiește cu valorile tale din dashboard.emailjs.com ===
-const EMAILJS_PUBLIC_KEY  = 'INLOCUIESTE_CU_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'INLOCUIESTE_CU_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'INLOCUIESTE_CU_TEMPLATE_ID';
-
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+// === FORMSUBMIT CONFIG ===
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/84f6b09d1213e2b05eadb73b2c4d0a86';
 
 // === BADGE PRODUS SELECTAT ÎN FORMULAR ===
 const form   = document.getElementById('contact-form');
@@ -196,7 +192,7 @@ if (form) {
 }
 
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
@@ -205,26 +201,36 @@ if (form) {
     status.textContent = '';
     status.className = 'form__status';
 
-    const templateParams = {
-      from_name: form.querySelector('[name="nume"]').value,
-      phone:     form.querySelector('[name="telefon"]').value,
-      message:   form.querySelector('[name="mesaj"]')?.value || '',
-      product:   form.querySelector('[name="produs"]')?.value || '',
+    const formData = {
+      nume:     form.querySelector('[name="nume"]')?.value || '',
+      telefon:  form.querySelector('[name="telefon"]')?.value || '',
+      locatie:  form.querySelector('[name="locatie"]')?.value || '',
+      mesaj:    form.querySelector('[name="mesaj"]')?.value || '',
+      produs:   form.querySelector('[name="produs"]')?.value || '',
+      _subject: 'Cerere nouă — cuboxmodular.ro',
+      _template: 'table',
     };
 
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-      .then(() => {
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const json = await res.json();
+      if (json.success === 'true' || json.success === true) {
         status.textContent = '✓ Cererea a fost trimisă! Te contactăm în cel mult 48 de ore.';
         status.className = 'form__status success';
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
         form.reset();
-      })
-      .catch(() => {
-        status.textContent = '✗ Eroare la trimitere. Sună-ne direct la 0728873857.';
-        status.className = 'form__status error';
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      });
+      } else {
+        throw new Error(json.message);
+      }
+    } catch {
+      status.textContent = '✗ Eroare la trimitere. Sună-ne direct la 0728873857.';
+      status.className = 'form__status error';
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
   });
 }
