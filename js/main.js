@@ -172,7 +172,7 @@ if (stickyCta && contactSection) {
 }
 
 // === FORMSUBMIT CONFIG ===
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/aiandramaftei@gmail.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@cuboxmodular.ro';
 
 // === BADGE PRODUS SELECTAT ÎN FORMULAR ===
 const form   = document.getElementById('contact-form');
