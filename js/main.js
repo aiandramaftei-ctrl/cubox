@@ -172,7 +172,7 @@ if (stickyCta && contactSection) {
 }
 
 // === FORMSUBMIT CONFIG ===
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/84f6b09d1213e2b05eadb73b2c4d0a86';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/aiandramaftei@gmail.com';
 
 // === BADGE PRODUS SELECTAT ÎN FORMULAR ===
 const form   = document.getElementById('contact-form');
