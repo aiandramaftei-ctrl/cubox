@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog Produse 2026 — CUBOX Modular</title>
+  <meta name="description" content="Catalog complet containere CUBOX Modular — modulare, comerciale, maritime, închiriere. Prețuri clare, livrare în toată România în 15–21 zile.">
+  <meta property="og:title" content="Catalog Produse — CUBOX Modular">
+  <meta property="og:description" content="29 modele de containere. Prețuri de la 2.200 €. Livrare România 15–21 zile.">
+  <meta property="og:image" content="https://cuboxmodular.ro/assets/cubox-modular-logo.png">
+  <meta property="og:url" content="https://cuboxmodular.ro/catalog.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETB5ED006N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ETB5ED006N');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D2849;
+      --navy-light: #1a3d6e;
+      --orange: #E8720C;
+      --orange-hover: #c9600a;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #f0f2f5;
+      --gray-200: #e2e6ed;
+      --gray-400: #9aa2b0;
+      --gray-600: #5a6272;
+      --gray-800: #2d3340;
+      --text: #1a1f2e;
+      --radius: 10px;
+      --shadow: 0 2px 12px rgba(13,40,73,0.10);
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--gray-50);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    .cat-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .cat-header__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .cat-header__logo img {
+      height: 36px;
+      width: 36px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: white;
+    }
+    .cat-header__brand {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .cat-header__brand span {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .cat-header__cta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #25D366;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cat-header__cta svg { width: 16px; height: 16px; }
+
+    /* ===== HERO BANNER ===== */
+    .cat-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 24px 16px 20px;
+      text-align: center;
+    }
+    .cat-hero__title {
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .cat-hero__sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 14px;
+    }
+    .cat-hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+    .cat-hero__badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* ===== TABS ===== */
+    .cat-tabs {
+      position: sticky;
+      top: 57px;
+      z-index: 90;
+      background: white;
+      border-bottom: 2px solid var(--gray-200);
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .cat-tabs::-webkit-scrollbar { display: none; }
+    .cat-tabs__inner {
+      display: flex;
+      min-width: max-content;
+      padding: 0 8px;
+    }
+    .cat-tab {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 13px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-600);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .cat-tab:hover { color: var(--navy); }
+    .cat-tab.active {
+      color: var(--navy);
+      border-bottom-color: var(--orange);
+    }
+    .cat-tab__count {
+      background: var(--gray-100);
+      color: var(--gray-600);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+    .cat-tab.active .cat-tab__count {
+      background: var(--orange);
+      color: white;
+    }
+
+    /* ===== SECTION ===== */
+    .cat-section { display: none; padding: 16px; }
+    .cat-section.active { display: block; }
+    .cat-section__title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-400);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding-left: 2px;
+    }
+
+    /* ===== GRID ===== */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 480px) {
+      .cat-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 720px) {
+      .cat-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .cat-section { padding: 20px 24px; }
+    }
+
+    /* ===== CARD ===== */
+    .cat-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s, box-shadow 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .cat-card:active {
+      transform: scale(0.97);
+    }
+    @media (hover: hover) {
+      .cat-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(13,40,73,0.16);
+      }
+    }
+    .cat-card__img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--gray-100);
+      display: block;
+    }
+    .cat-card__body {
+      padding: 9px 10px 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cat-card__name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .cat-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+      margin-top: auto;
+    }
+    .cat-card__price-label {
+      font-size: 10px;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    .cat-card__price-value {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .cat-card__price-cur {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--orange);
+    }
+    .cat-card__price-tax {
+      font-size: 9px;
+      color: var(--gray-400);
+    }
+    .cat-card__btn {
+      display: block;
+      background: var(--orange);
+      color: white;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 7px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 4px;
+      letter-spacing: 0.01em;
+    }
+    /* Per-tab accent color for maritime */
+    .cat-section--maritime .cat-card__btn { background: #0D2849; }
+    .cat-section--inchiriere .cat-card__btn { background: #1a5fb4; }
+
+    /* tag badges */
+    .cat-card__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .cat-card__tag--comanda { background: #dce8fb; color: #1448a0; }
+    .cat-card__tag--disponibil { background: #d1fae5; color: #065f46; }
+    .cat-card__tag--inchiriere { background: #e0f2fe; color: #0369a1; }
+
+    /* ===== FOOTER ===== */
+    .cat-footer {
+      background: var(--navy);
+      padding: 24px 16px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .cat-footer__text {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    .cat-footer__btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .cat-footer__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+    }
+    .cat-footer__btn--phone { background: var(--orange); }
+    .cat-footer__btn--wa { background: #25D366; }
+    .cat-footer__btn--site { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); }
+    .cat-footer__btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .cat-footer__copy {
+      margin-top: 20px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ===== FLOATING WA BUTTON ===== */
+    .fab-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      z-index: 200;
+      background: #25D366;
+      color: white;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.45);
+      text-decoration: none;
+    }
+    .fab-wa svg { width: 26px; height: 26px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="cat-header">
+    <a href="index.html" class="cat-header__logo">
+      <img src="assets/cubox-modular-logo.png" alt="CUBOX Modular">
+      <div class="cat-header__brand">
+        CUBOX Modular
+        <span>Catalog produse</span>
+      </div>
+    </a>
+    <a href="tel:+40728873857" class="cat-header__cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Sună acum
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <div class="cat-hero">
+    <h1 class="cat-hero__title">Catalog Containere 2026</h1>
+    <p class="cat-hero__sub">29 modele · livrare România · prețuri fără TVA</p>
+    <div class="cat-hero__badges">
+      <span class="cat-hero__badge">Livrare 15–21 zile</span>
+      <span class="cat-hero__badge">De la 2.200 €</span>
+      <span class="cat-hero__badge">Toată România</span>
+      <span class="cat-hero__badge">La comandă</span>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <nav class="cat-tabs" id="catTabs">
+    <div class="cat-tabs__inner">
+      <button class="cat-tab active" data-tab="modulare">
+        Modulare <span class="cat-tab__count">11</span>
+      </button>
+      <button class="cat-tab" data-tab="comerciale">
+        Comerciale <span class="cat-tab__count">7</span>
+      </button>
+      <button class="cat-tab" data-tab="maritime">
+        Maritime <span class="cat-tab__count">6</span>
+      </button>
+      <button class="cat-tab" data-tab="inchiriere">
+        Închiriere <span class="cat-tab__count">5</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MODULARE ===== -->
+  <section class="cat-section active" id="sec-modulare">
+
+    <p class="cat-section__title">Standard 6×2,4 m</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-modulare/container-modular-6x24-alb.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Container Modular - 6 x 2,4 m - alb/Container modular - 6 x 2,4 m - alb - gri antracit -2 ferestre- randare.webp" alt="Container modular alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container modular — Alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.100</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-6x24-gri.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Container Modular - 6 x 2,4 m - gri antracit/Container modular - 6 x 2,4 m - gri - gri antracit - 2 ferestre- randare.webp" alt="Container modular gri antracit" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container modular — Gri antracit</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-6x24-color.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Containere modulare - 6 x 2,4 m - color mix/Container modular - 6 x 2,4 m - rosu - gri - 2 ferestre- ranadare.webp" alt="Container modular color mix" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container modular — Color mix</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.350</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="cat-section__title" style="margin-top:20px">Duble 6×4,8 m</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-modulare/container-modular-dublu-6x48-alb.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Container Modular Dublu - 6 x 4,8 m - alb/Container modular dublu - 6 x 4,8 m - alb - antracit-randare.webp" alt="Container modular dublu alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container dublu — Alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.000</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-dublu-6x48-gri.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Container Modular Dublu - 6 x 4,8 m - gri antracit/Container modular dublu - 6 x 4,8 m - gri - gri-randare.webp" alt="Container modular dublu gri" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container dublu — Gri antracit</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-dublu-6x48-color.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Container Modular Dublu - 6 x 4,8 m - color mix/Container modular dublu - 6 x 4,8 m - bamboo - antracit- randare-.webp" alt="Container modular dublu color mix" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Container dublu — Color mix</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.500</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="cat-section__title" style="margin-top:20px">Cu terasă</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-modulare/container-modular-terasa-gri-riflaj-24.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 2.4 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 2.4 m-gri antracit cu riflaj- randare.webp" alt="Container cu terasă 2.4m riflaj" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Terasă 2,4 m — Riflaj</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.850</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-terasa-gri-alb-3m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri alb/Continere modulare-6x2.4 cu terasa 3 m-gri alb-randare.webp" alt="Container cu terasă 3m gri alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Terasă 3 m — Gri & alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.950</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-terasa-gri-riflaj-3m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj/Continere modulare-6x2.4 cu terasa 3 m-gri antracit cu riflaj-randare.webp" alt="Container cu terasă 3m riflaj" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Terasă 3 m — Riflaj</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">7.250</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-dublu-terasa-gri-riflaj-3m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/continer modular dublu 6x 4.8 m cu terasa 3 m- gri antracit  riflaj/continer modular dublu 6x 4.8m cu terasa 3 m- gri antracit-randare.webp" alt="Container dublu cu terasă riflaj" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Dublu terasă 3 m — Riflaj</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">10.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-modulare/container-modular-dublu-terasa-gri-alb-3m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE MODULARE/continer modular dublu 6x 4.8 m cu terasa 3m- gri antracit-alb/continer modular dublu 6x 4.8 m cu terasa 3m- gri antracit-alb- randare.webp" alt="Container dublu cu terasă gri alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Dublu terasă 3 m — Gri & alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">9.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== COMERCIALE ===== -->
+  <section class="cat-section" id="sec-comerciale">
+
+    <p class="cat-section__title">Showroom</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-showroom-vitrina-alb.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina alb 6x3m/container comercial tip showroom- vitrina alb-randare.webp" alt="Container showroom vitrină alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Showroom vitrină — Alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">4.900</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-showroom-vitrina-gri.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL tip showroom- vitrina gri 6x3 m/container comercial tip showroom- vitrina gri-randare.webp" alt="Container showroom vitrină gri" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Showroom vitrină — Gri antracit</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">5.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-showroom-rollup.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL SHOWROOM/CONTAINER COMERCIAL-tip Showroom roll up de la 2.4 mx6/Container comercial-tip showroom 6x2.4m -randare - Copy.webp" alt="Container showroom rulou" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Showroom — Rulou</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">6.600</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="cat-section__title" style="margin-top:20px">Fast food</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-fastfood-oblon.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- gri antracit oblon-randare.webp" alt="Container fast food oblon" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Fast food — Oblon 3×2,4 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.250</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-fastfood-riflaj-4x24.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj/Container comercial, tip fastfood- 4x2.4 gri antracit cu riflaj-randare.webp" alt="Container fast food riflaj 4x2.4" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Fast food riflaj — 4×2,4 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.750</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-fastfood-riflaj-6x3.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/Container comercial, tip fastfood- 6x3gri antracit cu riflaj/Continer comercial tip fastfood- 6x3- gri antracit cu riglaj- randare.webp" alt="Container fast food riflaj 6x3" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Fast food riflaj — 6×3 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">4.900</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="cat-section__title" style="margin-top:20px">Kiosk</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-comerciale/container-comercial-kiosk-oblon.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTAINERE COMERCIALE/CONTINER COMERCIAL- FAST FOOD/CONTAINER COMERCIAL -Tip fastfood- 3x 2.4- oblon/Container comercial-tip fastfood- 3x 2.4- structura gri deschis-oblon- randare.webp" alt="Container kiosk oblon" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--comanda">La comandă</span>
+          <p class="cat-card__name">Kiosk oblon — 3×2,4 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-label">De la</span>
+            <span class="cat-card__price-value">3.250</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== MARITIME ===== -->
+  <section class="cat-section cat-section--maritime" id="sec-maritime">
+
+    <p class="cat-section__title">Containere NOU</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-maritime/maritim-nou-6m-gri.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou (2)/continer maritim nou -6m gri antracit.webp" alt="Container maritim nou 6m gri" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim NOU 6 m — Gri antracit</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">3.150</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-maritime/maritim-nou-6m-alb.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou (2)/continer maritim nou -6m alb murdar- .webp" alt="Container maritim nou 6m alb" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim NOU 6 m — Alb</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">3.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-maritime/maritim-nou-6m-verde.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou (2)/continer maritim nou -6m- verde inchis.webp" alt="Container maritim nou 6m verde" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim NOU 6 m — Verde închis</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">3.300</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-maritime/maritim-nou-12m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou/container maritim 12m nou.webp" alt="Container maritim nou 12m" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim NOU 12 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">4.600</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="cat-section__title" style="margin-top:20px">Second Hand (SH)</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="containere-maritime/maritim-sh-6m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou (3)/continer maritim second hand- 6 m- gri.webp" alt="Container maritim SH 6m" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim SH 6 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">2.200</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="containere-maritime/maritim-sh-12m.html">
+        <img class="cat-card__img" src="CONTAINERE/CONTINERE MARITIME/Continere maritime -12 m- nou (4)/continer maritim second hand 12 m - grena.webp" alt="Container maritim SH 12m" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--disponibil">Disponibil</span>
+          <p class="cat-card__name">Maritim SH 12 m</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">3.050</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">fără TVA</span>
+          </div>
+          <span class="cat-card__btn">Detalii & ofertă</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== INCHIRIERE ===== -->
+  <section class="cat-section cat-section--inchiriere" id="sec-inchiriere">
+
+    <p class="cat-section__title">Containere la închiriere — preț / zi</p>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="inchiriere/birou.html">
+        <img class="cat-card__img" src="CONTAINERE/INCHIRIERI CONTINERE/Continere birou.webp" alt="Container birou închiriere" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--inchiriere">Închiriere</span>
+          <p class="cat-card__name">Container tip birou</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">4,5</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">/zi</span>
+          </div>
+          <span class="cat-card__btn">Cere ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="inchiriere/depozitare.html">
+        <img class="cat-card__img" src="CONTAINERE/INCHIRIERI CONTINERE/Container depozitare.webp" alt="Container depozitare închiriere" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--inchiriere">Închiriere</span>
+          <p class="cat-card__name">Container depozitare</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">3,5</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">/zi</span>
+          </div>
+          <span class="cat-card__btn">Cere ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="inchiriere/sanitar.html">
+        <img class="cat-card__img" src="CONTAINERE/INCHIRIERI CONTINERE/continer sanitar.webp" alt="Container sanitar închiriere" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--inchiriere">Închiriere</span>
+          <p class="cat-card__name">Container sanitar</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">5,5</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">/zi</span>
+          </div>
+          <span class="cat-card__btn">Cere ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="inchiriere/frigorific.html">
+        <img class="cat-card__img" src="CONTAINERE/INCHIRIERI CONTINERE/Continer frigorific.webp" alt="Container frigorific închiriere" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--inchiriere">Închiriere</span>
+          <p class="cat-card__name">Container frigorific</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">24</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">/zi</span>
+          </div>
+          <span class="cat-card__btn">Cere ofertă</span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="inchiriere/cabina-paza.html">
+        <img class="cat-card__img" src="CONTAINERE/INCHIRIERI CONTINERE/Continer cabina paza.webp" alt="Cabină pază închiriere" loading="lazy">
+        <div class="cat-card__body">
+          <span class="cat-card__tag cat-card__tag--inchiriere">Închiriere</span>
+          <p class="cat-card__name">Cabină de pază</p>
+          <div class="cat-card__price">
+            <span class="cat-card__price-value">2,8</span>
+            <span class="cat-card__price-cur">€</span>
+            <span class="cat-card__price-tax">/zi</span>
+          </div>
+          <span class="cat-card__btn">Cere ofertă</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="cat-footer">
+    <p class="cat-footer__text">Ai văzut ceva care îți place?<br>Contactează-ne — răspundem în maxim 2 ore.</p>
+    <div class="cat-footer__btns">
+      <a href="tel:+40728873857" class="cat-footer__btn cat-footer__btn--phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.12 15.7 19.79 19.79 0 012.05 7a2 2 0 011.99-1.99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Sună acum — 0728 873 857
+      </a>
+      <a href="https://wa.me/40728873857?text=Buna%20ziua!%20Am%20vazut%20catalogul%20CUBOX%20Modular%20si%20as%20dori%20o%20oferta." class="cat-footer__btn cat-footer__btn--wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Scrie pe WhatsApp
+      </a>
+      <a href="index.html" class="cat-footer__btn cat-footer__btn--site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        cuboxmodular.ro
+      </a>
+    </div>
+    <p class="cat-footer__copy">© 2026 CUBOX Modular — UNOMATEC SRL · CUI 52816517</p>
+  </footer>
+
+  <!-- FAB WhatsApp -->
+  <a href="https://wa.me/40728873857?text=Buna%20ziua!%20Am%20vazut%20catalogul%20CUBOX%20Modular%20si%20as%20dori%20o%20oferta." class="fab-wa" target="_blank" rel="noopener" aria-label="Scrie pe WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.cat-tab');
+    const sections = {
+      modulare: document.getElementById('sec-modulare'),
+      comerciale: document.getElementById('sec-comerciale'),
+      maritime: document.getElementById('sec-maritime'),
+      inchiriere: document.getElementById('sec-inchiriere'),
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        Object.values(sections).forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        sections[target].classList.add('active');
+        // Scroll tabs into view
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        // Scroll to top of content
+        document.getElementById('catTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // GA4 events on card clicks
+    document.querySelectorAll('.cat-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.querySelector('.cat-card__name')?.textContent?.trim();
+        gtag('event', 'catalog_product_click', { product_name: name });
+      });
+    });
+  </script>
+</body>
+</html>
