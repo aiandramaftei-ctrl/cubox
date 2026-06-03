@@ -1,0 +1,41 @@
+name: Ping Sitemap
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Google
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://cuboxmodular.ro/sitemap.xml"
+          echo "Google pinged"
+
+      - name: Ping Bing / IndexNow
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://cuboxmodular.ro/sitemap.xml"
+          echo "Bing pinged"
+
+      - name: IndexNow bulk submit
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "cuboxmodular.ro",
+              "key": "cuboxmodular2026seo",
+              "keyLocation": "https://cuboxmodular.ro/cuboxmodular2026seo.txt",
+              "urlList": [
+                "https://cuboxmodular.ro/",
+                "https://cuboxmodular.ro/containere-modulare.html",
+                "https://cuboxmodular.ro/containere-comerciale.html",
+                "https://cuboxmodular.ro/containere-maritime.html",
+                "https://cuboxmodular.ro/inchiriere.html",
+                "https://cuboxmodular.ro/blog/index.html",
+                "https://cuboxmodular.ro/blog/autorizatie-container-legea-50-1991.html",
+                "https://cuboxmodular.ro/blog/cat-costa-container-fast-food-romania.html",
+                "https://cuboxmodular.ro/blog/container-modular-vs-constructie-clasica.html"
+              ]
+            }'
+          echo "IndexNow submitted"
