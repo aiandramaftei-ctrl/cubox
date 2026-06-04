@@ -154,11 +154,8 @@ const contactSection = document.getElementById('cerere-oferta');
 
 if (stickyCta) {
   stickyCta.innerHTML = `
-    <a href="tel:+40728873857" class="sticky-cta__call">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 010 .18 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      Sună acum
-    </a>
     <a href="#cerere-oferta" class="sticky-cta__offer btn btn--primary">Cere ofertă</a>
+    <a href="tel:+40728873857" class="sticky-cta__emergency">Urgențe · Relații clienți: 0728 873 857</a>
   `;
 }
 
@@ -221,7 +218,7 @@ if (form) {
         throw new Error(json.message);
       }
     } catch {
-      status.textContent = '✗ Eroare la trimitere. Sună-ne direct la 0728873857.';
+      status.textContent = '✗ Eroare la trimitere. Scrie-ne direct la contact@cuboxmodular.ro';
       status.className = 'form__status error';
     } finally {
       submitBtn.innerHTML = originalText;
