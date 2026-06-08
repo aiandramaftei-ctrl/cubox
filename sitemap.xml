@@ -309,6 +309,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://cuboxmodular.ro/blog/container-maritim-vs-modular.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Alte pagini -->
   <url>
