@@ -527,7 +527,7 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 CUBOX Modular. Toate drepturile rezervate. | <strong>UNOMATEC SRL</strong> &mdash; CUI: 52816517 &mdash; Nr. Reg. Com.: J2025083882002 &mdash; Bacău</p>
+        <p>&copy; 2026 CUBOX Modular &middot; ARCADA MET S.R.L. &middot; CIF: RO53198090 &middot; J2025101136005 &middot; Galați</p>
       </div>
     </div>
   </footer>
