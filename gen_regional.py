@@ -14,7 +14,7 @@ cities = [
         "h1": "Containere modulare Bacău",
         "hero_desc": "Livrăm containere modulare în Bacău și județul Bacău în 15–21 de zile lucrătoare. Sediu local — vino să discuți direct sau cere ofertă online.",
         "intro_title": "De ce CUBOX Modular în Bacău",
-        "intro_text": "Suntem cu sediul în Bacău — cel mai scurt drum de la comandă la livrare pe care îl poți găsi în Moldova. Containere modulare standard, duble și cu terasă, containere comerciale pentru fast food și showroom — toate disponibile cu livrare în județul Bacău. Fiecare container este livrat gata montat, fără autorizație de construcție.",
+        "intro_text": "Suntem cu sediul în Bacău — cel mai scurt drum de la comandă la livrare pe care îl poți găsi în Moldova. Containere modulare standard, duble și cu terasă, containere comerciale pentru fast food și showroom — toate disponibile cu livrare în județul Bacău. Fiecare container este livrat gata montat.",
         "uses": ["Birou de șantier", "Spațiu comercial fast food", "Depozit", "Studio sau birou acasă", "Cabină de pază", "Container cu terasă pentru odihnă"],
     },
     {
@@ -28,7 +28,7 @@ cities = [
         "h1": "Containere modulare Suceava",
         "hero_desc": "Livrăm containere modulare în Suceava și județul Suceava în 15–21 de zile lucrătoare. Birou, depozit, fast food, container cu terasă — soluție rapidă fără birocrație.",
         "intro_title": "Containere modulare livrate în Suceava",
-        "intro_text": "CUBOX Modular livrează containere modulare în Suceava din depozitul propriu din Moldova. Transport și montaj inclus în prețul final — nu plătești nimic extra pentru livrare în Suceava. Containerele sunt fabricate în România, livrate gata de utilizare, fără autorizație de construcție necesară.",
+        "intro_text": "CUBOX Modular livrează containere modulare în Suceava din depozitul propriu din Moldova. Transport și montaj inclus în prețul final — nu plătești nimic extra pentru livrare în Suceava. Containerele sunt fabricate în România, livrate gata de utilizare.",
         "uses": ["Birou șantier", "Kiosk fast food", "Spațiu comercial", "Depozit mobil", "Container cu terasă", "Cabină de pază"],
     },
     {
@@ -40,7 +40,7 @@ cities = [
         "meta_title": "Containere modulare Iași | CUBOX Modular — Livrare în 15–21 zile",
         "meta_desc": "Containere modulare în Iași — livrare în județul Iași în 15–21 zile lucrătoare. 11 modele disponibile. Prețuri de la 2.700 EUR fără TVA. Ofertă personalizată gratuită.",
         "h1": "Containere modulare Iași",
-        "hero_desc": "Livrăm containere modulare în Iași și județul Iași în 15–21 de zile lucrătoare. Fără autorizație de construcție. Livrare gata montate la locația ta.",
+        "hero_desc": "Livrăm containere modulare în Iași și județul Iași în 15–21 de zile lucrătoare. Livrare gata montate la locația ta.",
         "intro_title": "De ce containere modulare în Iași",
         "intro_text": "Iașul este unul dintre cele mai dinamice orașe din România din punct de vedere al construcțiilor și afacerilor. Containerele modulare CUBOX sunt soluția rapidă pentru antreprenorii din Iași care vor un spațiu funcțional fără birocrație și fără luni de așteptare. Livrăm direct la locația ta din județul Iași, gata montat.",
         "uses": ["Birou de firmă", "Fast food și kiosk", "Showroom produse", "Birou de șantier", "Depozit marfă", "Studio sau atelier"],
@@ -56,7 +56,7 @@ cities = [
         "h1": "Containere modulare Brașov",
         "hero_desc": "Livrăm containere modulare în Brașov și județul Brașov în 15–21 de zile lucrătoare. Ideal pentru turism, construcții, comerț și afaceri.",
         "intro_title": "Containere modulare livrate în Brașov",
-        "intro_text": "Brașovul și zona sa montană au o cerere mare de spații funcționale temporare și permanente — pentru turism, construcții, retail și afaceri mici. CUBOX Modular livrează containere modulare în Brașov gata montate, cu toate finisajele incluse. Nu ai nevoie de autorizație de construcție pentru containerele noastre standard.",
+        "intro_text": "Brașovul și zona sa montană au o cerere mare de spații funcționale temporare și permanente — pentru turism, construcții, retail și afaceri mici. CUBOX Modular livrează containere modulare în Brașov gata montate, cu toate finisajele incluse.",
         "uses": ["Spațiu turistic sezonier", "Birou de șantier", "Fast food și cafenea", "Depozit", "Container cu terasă panoramică", "Showroom"],
     },
     {
@@ -82,7 +82,7 @@ cities = [
         "meta_title": "Containere modulare București | CUBOX Modular — Livrare în 15–21 zile",
         "meta_desc": "Containere modulare în București și Ilfov — livrare în 15–21 zile lucrătoare. 11 modele, prețuri de la 2.700 EUR fără TVA. Containerele tale gata montate la adresa ta.",
         "h1": "Containere modulare București",
-        "hero_desc": "Livrăm containere modulare în București și județul Ilfov în 15–21 de zile lucrătoare. Gata montate, fără autorizație de construcție.",
+        "hero_desc": "Livrăm containere modulare în București și județul Ilfov în 15–21 de zile lucrătoare. Gata montate, cu transport și montaj incluse.",
         "intro_title": "Containere modulare livrate în București",
         "intro_text": "Bucureștiul este cea mai mare piață din România pentru spații funcționale modulare. Construcțiile, logistica, retailul stradal, fast food-urile și birourile de șantier din Capitală au nevoie de soluții rapide. CUBOX Modular livrează containere modulare în toate sectoarele București și județul Ilfov — transport inclus, montat la locație.",
         "uses": ["Birou șantier în construcții", "Fast food și kiosk stradal", "Showroom și magazin pop-up", "Depozit logistic", "Container comercial pentru evenimente", "Birou firmă mică"],
@@ -126,7 +126,7 @@ cities = [
         "h1": "Containere modulare Timișoara",
         "hero_desc": "Livrăm containere modulare în Timișoara și județul Timiș — soluție rapidă pentru antreprenorii din cel mai vestic hub industrial al României.",
         "intro_title": "Containere modulare livrate în Timișoara",
-        "intro_text": "Timișoara este unul dintre cele mai active centre industriale și economice din România. Companiile din Timiș au nevoie de birouri de șantier, depozite rapide, spații comerciale relocabile. CUBOX Modular livrează containere modulare direct în Timișoara — transport inclus, montaj inclus, fără autorizație de construcție.",
+        "intro_text": "Timișoara este unul dintre cele mai active centre industriale și economice din România. Companiile din Timiș au nevoie de birouri de șantier, depozite rapide, spații comerciale relocabile. CUBOX Modular livrează containere modulare direct în Timișoara — transport inclus, montaj inclus, gata de folosit din prima zi.",
         "uses": ["Birou firmă sau startup", "Birouri de șantier industrial", "Depozit rapid", "Fast food și kiosk", "Showroom produse", "Container cu terasă"],
     },
     {
@@ -140,7 +140,7 @@ cities = [
         "h1": "Containere modulare Ploiești",
         "hero_desc": "Livrăm containere modulare în Ploiești și județul Prahova în 15–21 de zile lucrătoare. Soluție rapidă pentru industrie, construcții și comerț.",
         "intro_title": "Containere modulare în Ploiești și Prahova",
-        "intro_text": "Zona Ploiești-Prahova, cu activitatea sa industrială, petrochimică și comercială intensă, are nevoie constantă de spații funcționale rapide. CUBOX Modular livrează containere modulare în Ploiești și toată Prahova — birouri de șantier, depozite, spații comerciale, containere cu terasă. Livrate gata montate, fără autorizație de construcție.",
+        "intro_text": "Zona Ploiești-Prahova, cu activitatea sa industrială, petrochimică și comercială intensă, are nevoie constantă de spații funcționale rapide. CUBOX Modular livrează containere modulare în Ploiești și toată Prahova — birouri de șantier, depozite, spații comerciale, containere cu terasă. Livrate gata montate, direct la amplasament.",
         "uses": ["Birou de șantier industrial", "Depozit rapid", "Kiosk și fast food", "Spațiu comercial relocabil", "Container cu terasă", "Birou firmă"],
     },
 ]
@@ -397,7 +397,7 @@ TEMPLATE = '''<!DOCTYPE html>
         <a href="containere-modulare/container-modular-6x24-alb.html" class="model-card">
           <div class="model-card__tag model-card__tag--modular">Standard</div>
           <p class="model-card__title">Container modular 6×2,4m — Alb</p>
-          <p class="model-card__desc">Birou, depozit sau spațiu comercial. Fără autorizație de construcție. Livrat gata montat.</p>
+          <p class="model-card__desc">Birou, depozit sau spațiu comercial. Livrat gata montat, ușor de relocat.</p>
           <div class="model-card__price">de la 2.700 € <span>fără TVA</span></div>
         </a>
         <a href="containere-modulare/container-modular-6x24-gri.html" class="model-card">
