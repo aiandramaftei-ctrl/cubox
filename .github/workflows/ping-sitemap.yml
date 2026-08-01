@@ -35,7 +35,9 @@ jobs:
                 "https://cuboxmodular.ro/blog/index.html",
                 "https://cuboxmodular.ro/blog/autorizatie-container-legea-50-1991.html",
                 "https://cuboxmodular.ro/blog/cat-costa-container-fast-food-romania.html",
-                "https://cuboxmodular.ro/blog/container-modular-vs-constructie-clasica.html"
+                "https://cuboxmodular.ro/blog/container-modular-vs-constructie-clasica.html",
+                "https://cuboxmodular.ro/termeni-si-conditii.html",
+                "https://cuboxmodular.ro/politica-confidentialitate.html"
               ]
             }'
           echo "IndexNow submitted"
