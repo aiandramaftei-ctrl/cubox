@@ -1210,6 +1210,201 @@ ul  { list-style: none; }
 }
 .footer__links a:hover { color: var(--white); }
 
+.footer__cities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-bottom: 28px;
+  font-size: 13px;
+}
+.footer__cities strong {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-right: 4px;
+}
+.footer__cities a {
+  color: rgba(255,255,255,0.48);
+  transition: color var(--transition);
+}
+.footer__cities a:hover { color: var(--white); }
+
+.city-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.city-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  transition: border-color var(--transition), color var(--transition);
+}
+.city-links a:hover { border-color: var(--blue); color: var(--blue); }
+
+/* Pagini regionale — blocuri locale (livrare, teren, pași, întrebări) */
+.local-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.local-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 30px;
+}
+.local-card--steps { margin-bottom: 40px; }
+.local-card h2 {
+  font-size: 21px;
+  font-weight: 800;
+  color: #0D2849;
+  margin-bottom: 14px;
+}
+.local-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a5060;
+  margin-bottom: 14px;
+}
+.local-places {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.local-places li {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0D2849;
+  background: #f1f5fb;
+  border: 1px solid #dce8fb;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.local-card .local-note {
+  background: #fff8eb;
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 0;
+}
+.local-checks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.local-checks li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2c3140;
+}
+.local-checks li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #dce8fb;
+  color: #1448a0;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.local-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.local-steps li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #2c3140;
+}
+.local-steps span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0D2849;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.faq-local {
+  max-width: 760px;
+  display: grid;
+  gap: 8px;
+}
+.faq-local__item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.faq-local__item[open] { border-color: var(--blue); }
+.faq-local__item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.faq-local__item summary::-webkit-details-marker { display: none; }
+.faq-local__item summary::after {
+  content: "+";
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 1;
+}
+.faq-local__item[open] summary::after { content: "−"; }
+.faq-local__item p {
+  margin: 0;
+  padding: 0 18px 16px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+.faq-local__item a { color: var(--blue); text-decoration: underline; }
+@media (max-width: 900px) {
+  .local-steps { grid-template-columns: 1fr; }
+  .local-steps li { display: flex; align-items: flex-start; gap: 14px; }
+  .local-steps span { flex-shrink: 0; margin-bottom: 0; }
+}
+@media (max-width: 720px) {
+  .local-grid { grid-template-columns: 1fr; }
+  .local-card { padding: 22px 20px; }
+}
+
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,0.07);
   padding-top: 24px;
