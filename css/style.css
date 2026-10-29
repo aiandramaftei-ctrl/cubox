@@ -2658,7 +2658,10 @@ ul  { list-style: none; }
   .sale-bar__sub { display: none; }
 }
 
-.footer__bottom p:first-child { color: rgba(255,255,255,0.5); }
+.footer__bottom > p:first-of-type { color: rgba(255,255,255,0.5); }
+.anpc-sal { display: inline-block; margin-bottom: 16px; line-height: 0; border-radius: 4px; }
+.anpc-sal img { width: 250px; height: 50px; object-fit: contain; object-position: left center; background: #fff; border-radius: 4px; }
+.anpc-sal:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
 .footer__legal-id {
   margin-top: 8px;
   color: rgba(255,255,255,0.55);
