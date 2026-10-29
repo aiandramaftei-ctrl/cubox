@@ -2654,9 +2654,19 @@ ul  { list-style: none; }
   outline-offset: 3px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1140px) {
   .sale-bar__sub { display: none; }
 }
+
+.footer__bottom p:first-child { color: rgba(255,255,255,0.5); }
+.footer__legal-id {
+  margin-top: 8px;
+  color: rgba(255,255,255,0.55);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.footer__legal-id a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer__legal-id a:hover { color: var(--white); }
 
 .sale-card {
   display: flex;

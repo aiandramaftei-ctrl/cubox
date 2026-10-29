@@ -4,18 +4,26 @@
   <meta charset="UTF-8">
   <link rel="canonical" href="https://cuboxmodular.ro/politica-confidentialitate.html">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ETB5ED006N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ETB5ED006N');
+  window.cbLoadGA = function () {
+    if (window.cbGA) return;
+    window.cbGA = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ETB5ED006N';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-ETB5ED006N');
+  };
+  try { if (localStorage.getItem('cubox_cookie_consent') === 'accepted') window.cbLoadGA(); } catch (e) {}
 </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Politica de confidentialitate CUBOX Modular — cum colectam si utilizam datele dumneavoastra personale.">
+  <meta name="description" content="Politica de confidențialitate a site-ului demonstrativ cuboxmodular.ro, administrat de UNOMATEC S.R.L.: ce date se prelucrează, cookie-uri și drepturile dumneavoastră.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CUBOX Modular">
   <meta property="og:image" content="https://cuboxmodular.ro/assets/og-image.jpg">
@@ -28,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=14">
   <style>
     .legal-page {
       padding: 60px 0 100px;
@@ -112,8 +120,8 @@
   <!-- TOPBAR -->
   <div class="topbar topbar--sale">
     <div class="topbar__inner">
-      <p class="sale-bar__text"><strong>Acest site este de vânzare.</strong> <span class="sale-bar__sub">Îți dorești unul asemănător pentru afacerea ta?</span></p>
-      <a href="mailto:unomatec90@gmail.com?subject=Site%20asem%C4%83n%C4%83tor%20cu%20CUBOX%20Modular" class="sale-bar__cta" data-sale-cta="sus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>unomatec90@gmail.com</a>
+      <p class="sale-bar__text"><strong>Site de prezentare — model demonstrativ.</strong> <span class="sale-bar__sub">Realizăm site-uri personalizate pentru afacerea ta.</span></p>
+      <a href="mailto:unomatec90@gmail.com?subject=Site%20personalizat%20(model%20CUBOX%20Modular)" class="sale-bar__cta" data-sale-cta="sus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>unomatec90@gmail.com</a>
     </div>
   </div>
 
@@ -147,80 +155,83 @@
       <div class="legal-header">
         <p class="legal-header__label">Legal</p>
         <h1>Politică de confidențialitate</h1>
-        <p class="legal-header__meta">Ultima actualizare: iulie 2026</p>
+        <p class="legal-header__meta">Ultima actualizare: 29 octombrie 2026</p>
       </div>
 
       <div class="legal-content">
 
-        <p>Această politică descrie cum CUBOX Modular colectează, utilizează și protejează datele cu caracter personal ale vizitatorilor site-ului <strong>cuboxmodular.ro</strong>, în conformitate cu Regulamentul (UE) 2016/679 (GDPR) și legislația românească aplicabilă.</p>
+        <div class="legal-box">
+          <p><strong>Site demonstrativ.</strong> cuboxmodular.ro este un site de prezentare realizat ca model. Produsele și prețurile afișate sunt exemple și nu se vând. Site-ul nu are formular de comandă sau de contact.</p>
+        </div>
+
+        <p>Această politică explică ce date cu caracter personal se prelucrează atunci când vizitați site-ul <strong>cuboxmodular.ro</strong> sau ne scrieți, în conformitate cu Regulamentul (UE) 2016/679 (GDPR) și cu Legea nr. 506/2004.</p>
 
         <h2>1. Operatorul de date</h2>
         <p>
-          <strong>CUBOX Modular</strong><br>
-          Bacău, România<br>
-          Email: <a href="mailto:contact@cuboxmodular.ro">contact@cuboxmodular.ro</a>
+          <strong>UNOMATEC S.R.L.</strong><br>
+          CUI 52816517 · Nr. de ordine în Registrul Comerțului J2025083882002<br>
+          Sediu: Sat Luncani, Com. Mărgineni, Str. Blăgoaia nr. 43C, jud. Bacău, România<br>
+          Email: <a href="mailto:unomatec90@gmail.com">unomatec90@gmail.com</a>
         </p>
+        <p>Nu am desemnat un responsabil cu protecția datelor.</p>
 
-        <h2>2. Ce date colectăm</h2>
-        <p>Colectăm exclusiv datele pe care le furnizați voluntar prin formularul de contact sau ofertă de pe site:</p>
+        <h2>2. Statistici de vizitare (Google Analytics) — doar cu acordul dumneavoastră</h2>
+        <p>Dacă apăsați „Acceptă” în bannerul de cookie-uri, folosim Google Analytics pentru a afla câte persoane vizitează site-ul, ce pagini văd și dacă apasă pe adresa de email. Se prelucrează date despre vizită: paginile accesate, tipul de dispozitiv și de browser, localizarea aproximativă (dedusă de Google din adresa IP) și un identificator salvat într-un cookie.</p>
+        <p><strong>Temei:</strong> consimțământul dumneavoastră (art. 6 alin. (1) lit. a) GDPR și art. 4 alin. (5) din Legea nr. 506/2004). Fără acord, Google Analytics nu se încarcă deloc.</p>
+        <p><strong>Durata:</strong> datele din Google Analytics se păstrează cel mult 14 luni. Cookie-urile Google Analytics expiră după cel mult 2 ani sau se șterg atunci când retrageți acordul.</p>
+
+        <h2>3. Mesajele pe care ni le trimiteți</h2>
+        <p>Dacă ne scrieți la <a href="mailto:unomatec90@gmail.com">unomatec90@gmail.com</a>, prelucrăm datele din mesaj (numele, adresa de email și ce ne scrieți) ca să vă răspundem și, la cererea dumneavoastră, să vă trimitem o ofertă pentru un site.</p>
+        <p><strong>Temei:</strong> demersurile făcute la cererea dumneavoastră înainte de încheierea unui contract (art. 6 alin. (1) lit. b) GDPR).</p>
+        <p><strong>Durata:</strong> cel mult 2 ani de la ultima comunicare. Mesajele legate de un contract încheiat se păstrează pe durata contractului.</p>
+        <p>Până în octombrie 2026, site-ul a avut un formular de cerere ofertă. Pentru datele trimise atunci ne puteți scrie la aceeași adresă, inclusiv pentru a cere ștergerea lor.</p>
+
+        <h2>4. Date tehnice la fiecare vizită</h2>
+        <p>Când accesați site-ul, serverul care îl găzduiește (Hostinger) și Cloudflare (serviciu de rețea și de protecție) primesc automat adresa IP și date tehnice despre cerere: pagina accesată, browserul, data și ora. Fonturile site-ului se încarcă de la Google Fonts, care primește de asemenea adresa IP.</p>
+        <p><strong>Temei:</strong> interesul nostru legitim de a afișa corect site-ul și de a-l proteja împotriva atacurilor (art. 6 alin. (1) lit. f) GDPR). Aceste date sunt păstrate de furnizori în jurnalele lor tehnice.</p>
+
+        <h2>5. Cine primește datele</h2>
         <ul>
-          <li>Nume și prenume</li>
-          <li>Număr de telefon</li>
-          <li>Adresa de email (dacă este furnizată)</li>
-          <li>Județul / localitatea de livrare</li>
-          <li>Mesajul / solicitarea trimisă</li>
-          <li>Produsul pentru care se solicită ofertă</li>
+          <li><strong>Google</strong>: Google Analytics (doar cu acordul dumneavoastră), Gmail (căsuța de email la care ne scrieți) și Google Fonts</li>
+          <li><strong>Cloudflare</strong>: rețea și protecție pentru site</li>
+          <li><strong>Hostinger</strong>: serverul pe care este găzduit site-ul</li>
         </ul>
-        <p>Nu colectăm date sensibile (date medicale, financiare, biometrice) și nu solicităm CNP sau date de identitate.</p>
+        <p>Nu vindem date și nu le folosim pentru publicitate.</p>
 
-        <h2>3. Scopul și baza legală a prelucrării</h2>
-        <p>Datele colectate sunt utilizate exclusiv pentru:</p>
+        <h2>6. Transferuri în afara Spațiului Economic European</h2>
+        <p>Google și Cloudflare au sediul principal în SUA și pot prelucra date și acolo. Pentru transferurile către companiile americane certificate în Cadrul UE-SUA privind confidențialitatea datelor, Comisia Europeană a constatat un nivel adecvat de protecție prin Decizia de punere în aplicare (UE) 2023/1795 din 10 iulie 2023.</p>
+
+        <h2>7. Cookie-uri</h2>
         <ul>
-          <li><strong>Răspuns la solicitarea dumneavoastră comercială</strong> — elaborarea și transmiterea ofertei solicitate (baza legală: executarea unui contract / măsuri precontractuale, art. 6 alin. 1 lit. b GDPR)</li>
-          <li><strong>Comunicare comercială ulterioară</strong> — urmărirea ofertei trimise, dacă v-ați exprimat acordul (baza legală: consimțământ, art. 6 alin. 1 lit. a GDPR)</li>
+          <li><code>cubox_cookie_consent</code> — memorează alegerea dumneavoastră din bannerul de cookie-uri. Este salvat în browser și este necesar pentru funcționarea bannerului.</li>
+          <li><code>_ga</code> și <code>_ga_ETB5ED006N</code> — Google Analytics, doar dacă ați apăsat „Acceptă”.</li>
         </ul>
-        <p>Nu utilizăm datele în scopuri de marketing terț, nu le vindem și nu le transmitem altor companii în afara prestatorilor tehnici descriși mai jos.</p>
+        <p>Vă puteți schimba alegerea oricând din linkul <a href="#" data-cookie-settings>Setări cookie-uri</a>, aflat și în subsolul fiecărei pagini. Cookie-urile pot fi șterse și din setările browserului.</p>
 
-        <h2>4. Destinatarii datelor</h2>
-        <p>Datele dumneavoastră pot fi accesate de:</p>
+        <h2>8. Drepturile dumneavoastră</h2>
+        <p>Ne puteți cere oricând:</p>
         <ul>
-          <li><strong>EmailJS Inc.</strong> — serviciu tehnic de transmitere email (SUA, conform Privacy Shield / Clauzele contractuale standard). Datele sunt tranzitate, nu stocate permanent.</li>
-          <li>Echipa internă CUBOX Modular responsabilă cu ofertele comerciale.</li>
+          <li><strong>accesul</strong> la datele pe care le avem despre dumneavoastră;</li>
+          <li><strong>rectificarea</strong> datelor inexacte;</li>
+          <li><strong>ștergerea</strong> datelor;</li>
+          <li><strong>restricționarea</strong> prelucrării;</li>
+          <li><strong>portabilitatea</strong> datelor;</li>
+          <li>vă puteți <strong>opune</strong> prelucrării bazate pe interesul nostru legitim.</li>
         </ul>
-        <p>Nu transferăm date către alte terțe părți.</p>
+        <p>Când prelucrarea se bazează pe consimțământ, îl puteți retrage oricând, fără a afecta legalitatea prelucrării făcute înainte de retragere. Pentru oricare dintre aceste drepturi, scrieți-ne la <a href="mailto:unomatec90@gmail.com">unomatec90@gmail.com</a>.</p>
 
-        <h2>5. Durata stocării</h2>
-        <p>Datele din formular sunt păstrate în căsuța de email a operatorului pe durata necesară procesării solicitării, dar nu mai mult de <strong>2 ani</strong> de la ultima interacțiune. La cerere, le ștergem imediat.</p>
-
-        <h2>6. Cookie-uri</h2>
-        <p>Site-ul utilizează exclusiv cookie-uri funcționale necesare pentru buna funcționare (memorarea preferinței privind cookie-urile). Nu utilizăm cookie-uri de tracking sau publicitate.</p>
-        <p>Cookie utilizat: <code>cubox_cookie_consent</code> — stochează alegerea dumneavoastră (acceptat / refuzat). Stocat în <code>localStorage</code>, nu se trimite la server.</p>
-
-        <h2>7. Drepturile dumneavoastră</h2>
-        <p>În temeiul GDPR, aveți următoarele drepturi:</p>
-        <ul>
-          <li><strong>Dreptul de acces</strong> — puteți solicita o copie a datelor pe care le deținem despre dumneavoastră</li>
-          <li><strong>Dreptul la rectificare</strong> — puteți solicita corectarea datelor inexacte</li>
-          <li><strong>Dreptul la ștergere</strong> — puteți solicita ștergerea datelor ("dreptul de a fi uitat")</li>
-          <li><strong>Dreptul la portabilitate</strong> — puteți solicita datele într-un format structurat</li>
-          <li><strong>Dreptul la opoziție</strong> — vă puteți opune prelucrării în scop de marketing</li>
-          <li><strong>Dreptul de a retrage consimțământul</strong> — oricând, fără efect retroactiv</li>
-        </ul>
-        <p>Pentru exercitarea oricărui drept, contactați-ne la <a href="mailto:contact@cuboxmodular.ro">contact@cuboxmodular.ro</a>. Răspundem în termen de 30 de zile.</p>
-
-        <h2>8. Dreptul de a depune plângere</h2>
-        <p>Dacă considerați că prelucrarea datelor dumneavoastră încalcă GDPR, puteți depune plângere la:</p>
+        <h2>9. Plângere la autoritate</h2>
+        <p>Aveți dreptul să depuneți o plângere la:</p>
         <div class="legal-box">
           <p><strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong><br>
-          Bd. G-ral. Gheorghe Magheru nr. 28–30, Sector 1, București<br>
-          Website: <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a></p>
+          B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, cod poștal 010336, București<br>
+          Email: anspdcp@dataprotection.ro · Website: <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a></p>
         </div>
 
-        <h2>9. Securitatea datelor</h2>
-        <p>Luăm măsuri tehnice și organizatorice rezonabile pentru protejarea datelor împotriva accesului neautorizat, alterării sau divulgării. Comunicarea prin email este criptată TLS.</p>
-
-        <h2>10. Modificări ale politicii</h2>
-        <p>Ne rezervăm dreptul de a actualiza această politică. Versiunea actualizată va fi publicată pe această pagină, cu data ultimei modificări indicată în antet. Continuarea utilizării site-ului după publicarea modificărilor constituie acceptarea acestora.</p>
+        <h2>10. Alte informații</h2>
+        <p>Nu sunteți obligat să ne furnizați date. Dacă nu ne scrieți, nu vă putem răspunde. Dacă refuzați cookie-urile, site-ul funcționează normal.</p>
+        <p>Nu luăm decizii automate și nu creăm profiluri pe baza datelor dumneavoastră.</p>
+        <p>Putem actualiza această politică. Versiunea în vigoare este cea publicată pe această pagină, cu data din antet.</p>
 
       </div>
     </div>
@@ -268,13 +279,14 @@
         <a href="containere-modulare-timisoara.html">Timișoara</a>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 CUBOX Modular</p>
+        <p>&copy; 2026 CUBOX Modular — site de prezentare, model demonstrativ. Produsele și prețurile sunt exemple și nu se vând.</p>
+        <p class="footer__legal-id">Realizat și administrat de UNOMATEC S.R.L. · CUI 52816517 · J2025083882002 · Sat Luncani, Com. Mărgineni, Str. Blăgoaia nr. 43C, jud. Bacău · <a href="mailto:unomatec90@gmail.com">unomatec90@gmail.com</a> · <a href="#" data-cookie-settings>Setări cookie-uri</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=13"></script>
-  <script src="js/cookie-consent.js"></script>
+  <script src="js/main.js?v=14"></script>
+  <script src="js/cookie-consent.js?v=14"></script>
 </body>
 </html>
 

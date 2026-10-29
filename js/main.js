@@ -148,9 +148,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// === SITE DE VÂNZARE — CUBOX nu mai preia comenzi; formularul nu mai trimite nimic ===
+// === SITE DEMONSTRATIV — formularul nu mai trimite nimic; contact UNOMATEC ===
 const SALE_MAIL = 'unomatec90@gmail.com';
-const SALE_HREF = 'mailto:' + SALE_MAIL + '?subject=' + encodeURIComponent('Site asemănător cu CUBOX Modular');
+const SALE_HREF = 'mailto:' + SALE_MAIL + '?subject=' + encodeURIComponent('Site personalizat (model CUBOX Modular)');
 const MAIL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
 
 const contactGrid = document.querySelector('.contact-grid');
@@ -161,9 +161,9 @@ if (saleHost) {
   saleHost.innerHTML = `
     <div class="sale-card">
       <div class="sale-card__body">
-        <p class="sale-card__eyebrow">CUBOX Modular nu mai preia comenzi</p>
-        <h2 class="sale-card__title">Acest site este de vânzare.</h2>
-        <p class="sale-card__text">Îți dorești unul asemănător pentru afacerea ta?</p>
+        <p class="sale-card__eyebrow">Site demonstrativ</p>
+        <h2 class="sale-card__title">Acest site este un model de prezentare.</h2>
+        <p class="sale-card__text">Produsele și prețurile sunt exemple și nu se vând. Realizăm un site personalizat pentru afacerea ta.</p>
       </div>
       <a href="${SALE_HREF}" class="btn btn--primary sale-card__cta" data-sale-cta="card">${MAIL_ICON}${SALE_MAIL}</a>
     </div>
@@ -179,8 +179,8 @@ if (!stickyCta) {
 }
 stickyCta.classList.add('sticky-cta--sale');
 stickyCta.innerHTML = `
-  <p class="sale-sticky__text"><strong>Acest site este de vânzare.</strong> Îți dorești unul asemănător?</p>
-  <a href="${SALE_HREF}" class="btn btn--primary sale-sticky__cta" data-sale-cta="mobil">${MAIL_ICON}Scrie-mi</a>
+  <p class="sale-sticky__text"><strong>Site model de prezentare.</strong> Vrei unul personalizat?</p>
+  <a href="${SALE_HREF}" class="btn btn--primary sale-sticky__cta" data-sale-cta="mobil">${MAIL_ICON}Scrie-ne</a>
 `;
 
 const saleCard = document.querySelector('.sale-card');

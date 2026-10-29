@@ -4,12 +4,20 @@
   <meta charset="UTF-8">
   <link rel="canonical" href="https://cuboxmodular.ro/contact.html">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ETB5ED006N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ETB5ED006N');
+  window.cbLoadGA = function () {
+    if (window.cbGA) return;
+    window.cbGA = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ETB5ED006N';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-ETB5ED006N');
+  };
+  try { if (localStorage.getItem('cubox_cookie_consent') === 'accepted') window.cbLoadGA(); } catch (e) {}
 </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -28,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=14">
   <style>
     .contact-page {
       padding: 60px 0 80px;
@@ -165,8 +173,8 @@
 
   <div class="topbar topbar--sale">
     <div class="topbar__inner">
-      <p class="sale-bar__text"><strong>Acest site este de vânzare.</strong> <span class="sale-bar__sub">Îți dorești unul asemănător pentru afacerea ta?</span></p>
-      <a href="mailto:unomatec90@gmail.com?subject=Site%20asem%C4%83n%C4%83tor%20cu%20CUBOX%20Modular" class="sale-bar__cta" data-sale-cta="sus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>unomatec90@gmail.com</a>
+      <p class="sale-bar__text"><strong>Site de prezentare — model demonstrativ.</strong> <span class="sale-bar__sub">Realizăm site-uri personalizate pentru afacerea ta.</span></p>
+      <a href="mailto:unomatec90@gmail.com?subject=Site%20personalizat%20(model%20CUBOX%20Modular)" class="sale-bar__cta" data-sale-cta="sus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>unomatec90@gmail.com</a>
     </div>
   </div>
 
@@ -200,7 +208,7 @@
         <span>Contact</span>
       </nav>
       <h1 class="page-hero__title">Contact</h1>
-      <p class="page-hero__desc">CUBOX Modular nu mai preia comenzi.</p>
+      <p class="page-hero__desc">Site de prezentare, model demonstrativ. Produsele și prețurile sunt exemple și nu se vând.</p>
     </div>
   </div>
 
@@ -325,15 +333,16 @@
         <a href="containere-modulare-timisoara.html">Timișoara</a>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 CUBOX Modular</p>
+        <p>&copy; 2026 CUBOX Modular — site de prezentare, model demonstrativ. Produsele și prețurile sunt exemple și nu se vând.</p>
+        <p class="footer__legal-id">Realizat și administrat de UNOMATEC S.R.L. · CUI 52816517 · J2025083882002 · Sat Luncani, Com. Mărgineni, Str. Blăgoaia nr. 43C, jud. Bacău · <a href="mailto:unomatec90@gmail.com">unomatec90@gmail.com</a> · <a href="#" data-cookie-settings>Setări cookie-uri</a></p>
       </div>
     </div>
   </footer>
 
   <div class="sticky-cta" id="sticky-cta"></div>
 
-  <script src="js/main.js?v=13"></script>
-<script src="js/cookie-consent.js"></script></body>
+  <script src="js/main.js?v=14"></script>
+<script src="js/cookie-consent.js?v=14"></script></body>
 </html>
 
 

@@ -1,6 +1,28 @@
 (function () {
   var KEY = 'cubox_cookie_consent';
-  if (localStorage.getItem(KEY)) return;
+  var GA_ID = 'G-ETB5ED006N';
+
+  function citeste() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function salveaza(val) {
+    try { localStorage.setItem(KEY, val); } catch (e) {}
+  }
+
+  // La refuz: Google Analytics se oprește și cookie-urile lui se șterg.
+  function opresteGA() {
+    window['ga-disable-' + GA_ID] = true;
+    var domenii = [location.hostname, '.' + location.hostname.replace(/^www\./, '')];
+    document.cookie.split(';').forEach(function (c) {
+      var nume = c.split('=')[0].trim();
+      if (nume === '_ga' || nume.indexOf('_ga_') === 0) {
+        domenii.forEach(function (d) {
+          document.cookie = nume + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+        });
+        document.cookie = nume + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+      }
+    });
+  }
 
   var css = `
 #cb {
@@ -25,6 +47,9 @@
 @keyframes cb-slide {
   from { transform: translateY(100%); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #cb { animation: none; }
 }
 #cb p {
   margin: 0;
@@ -67,6 +92,7 @@
   transition: border-color .2s, color .2s;
 }
 #cb-refuse:hover { border-color: #fff; color: #fff; }
+#cb button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 @media (max-width: 540px) {
   #cb { padding: 16px 16px 24px; }
   #cb-actions { width: 100%; }
@@ -74,30 +100,53 @@
 }
 `;
 
-  var st = document.createElement('style');
-  st.textContent = css;
-  document.head.appendChild(st);
+  function arataBanner() {
+    if (document.getElementById('cb')) return;
+    if (!document.getElementById('cb-style')) {
+      var st = document.createElement('style');
+      st.id = 'cb-style';
+      st.textContent = css;
+      document.head.appendChild(st);
+    }
 
-  var el = document.createElement('div');
-  el.id = 'cb';
-  el.innerHTML = `
-    <p>Folosim cookie-uri necesare pentru funcționarea site-ului. Nu colectăm date de analiză sau marketing fără acordul tău. <a href="/politica-confidentialitate.html">Politică de confidențialitate</a></p>
-    <div id="cb-actions">
-      <button id="cb-accept">Acceptă</button>
-      <button id="cb-refuse">Refuz</button>
-    </div>
-  `;
-  document.body.appendChild(el);
+    var el = document.createElement('div');
+    el.id = 'cb';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-label', 'Cookie-uri');
+    el.innerHTML = `
+      <p>Folosim cookie-uri Google Analytics pentru statistici de vizitare, doar dacă apeși „Acceptă”. Poți schimba alegerea oricând din „Setări cookie-uri”, în subsolul paginii. <a href="/politica-confidentialitate.html">Politica de confidențialitate</a></p>
+      <div id="cb-actions">
+        <button type="button" id="cb-accept">Acceptă</button>
+        <button type="button" id="cb-refuse">Refuz</button>
+      </div>
+    `;
+    document.body.appendChild(el);
 
-  function dismiss(val) {
-    localStorage.setItem(KEY, val);
-    el.style.animation = 'none';
-    el.style.transition = 'transform .3s ease, opacity .3s ease';
-    el.style.transform = 'translateY(100%)';
-    el.style.opacity = '0';
-    setTimeout(function () { el.remove(); }, 320);
+    function inchide(val) {
+      salveaza(val);
+      if (val === 'accepted') {
+        window['ga-disable-' + GA_ID] = false;
+        if (typeof window.cbLoadGA === 'function') window.cbLoadGA();
+      } else {
+        opresteGA();
+      }
+      el.style.animation = 'none';
+      el.style.transition = 'transform .3s ease, opacity .3s ease';
+      el.style.transform = 'translateY(100%)';
+      el.style.opacity = '0';
+      setTimeout(function () { el.remove(); }, 320);
+    }
+
+    document.getElementById('cb-accept').addEventListener('click', function () { inchide('accepted'); });
+    document.getElementById('cb-refuse').addEventListener('click', function () { inchide('refused'); });
   }
 
-  document.getElementById('cb-accept').addEventListener('click', function () { dismiss('accepted'); });
-  document.getElementById('cb-refuse').addEventListener('click', function () { dismiss('refused'); });
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('[data-cookie-settings]');
+    if (!link) return;
+    e.preventDefault();
+    arataBanner();
+  });
+
+  if (!citeste()) arataBanner();
 })();
