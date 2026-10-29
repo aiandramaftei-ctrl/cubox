@@ -155,7 +155,6 @@ const contactSection = document.getElementById('cerere-oferta');
 if (stickyCta) {
   stickyCta.innerHTML = `
     <a href="#cerere-oferta" class="sticky-cta__offer btn btn--primary">Cere ofertă</a>
-    <a href="tel:+40728873857" class="sticky-cta__emergency">Urgențe · Relații clienți: 0728 873 857</a>
   `;
 }
 
