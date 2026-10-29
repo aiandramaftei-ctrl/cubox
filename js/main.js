@@ -148,82 +148,48 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// === STICKY MOBILE CTA — două butoane: sună + ofertă ===
-const stickyCta      = document.getElementById('sticky-cta');
-const contactSection = document.getElementById('cerere-oferta');
+// === SITE DE VÂNZARE — CUBOX nu mai preia comenzi; formularul nu mai trimite nimic ===
+const SALE_MAIL = 'unomatec90@gmail.com';
+const SALE_HREF = 'mailto:' + SALE_MAIL + '?subject=' + encodeURIComponent('Site asemănător cu CUBOX Modular');
+const MAIL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
 
-if (stickyCta) {
-  stickyCta.innerHTML = `
-    <a href="#cerere-oferta" class="sticky-cta__offer btn btn--primary">Cere ofertă</a>
+const contactGrid = document.querySelector('.contact-grid');
+const saleHost = document.querySelector('#cerere-oferta .container')
+  || (contactGrid && contactGrid.closest('.container'));
+
+if (saleHost) {
+  saleHost.innerHTML = `
+    <div class="sale-card">
+      <div class="sale-card__body">
+        <p class="sale-card__eyebrow">CUBOX Modular nu mai preia comenzi</p>
+        <h2 class="sale-card__title">Acest site este de vânzare.</h2>
+        <p class="sale-card__text">Îți dorești unul asemănător pentru afacerea ta?</p>
+      </div>
+      <a href="${SALE_HREF}" class="btn btn--primary sale-card__cta" data-sale-cta="card">${MAIL_ICON}${SALE_MAIL}</a>
+    </div>
   `;
 }
 
-if (stickyCta && contactSection) {
-  const hideObserver = new IntersectionObserver((entries) => {
+let stickyCta = document.getElementById('sticky-cta');
+if (!stickyCta) {
+  stickyCta = document.createElement('div');
+  stickyCta.id = 'sticky-cta';
+  stickyCta.className = 'sticky-cta';
+  document.body.appendChild(stickyCta);
+}
+stickyCta.classList.add('sticky-cta--sale');
+stickyCta.innerHTML = `
+  <p class="sale-sticky__text"><strong>Acest site este de vânzare.</strong> Îți dorești unul asemănător?</p>
+  <a href="${SALE_HREF}" class="btn btn--primary sale-sticky__cta" data-sale-cta="mobil">${MAIL_ICON}Scrie-mi</a>
+`;
+
+const saleCard = document.querySelector('.sale-card');
+if (saleCard) {
+  new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       stickyCta.style.display = entry.isIntersecting ? 'none' : '';
     });
-  }, { threshold: 0.1 });
-  hideObserver.observe(contactSection);
-}
-
-// === FORMSUBMIT CONFIG ===
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/84f6b09d1213e2b05eadb73b2c4d0a86';
-
-// === BADGE PRODUS SELECTAT ÎN FORMULAR ===
-const form   = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
-
-if (form) {
-  const produsInput = form.querySelector('[name="produs"]');
-  if (produsInput && produsInput.value) {
-    const badge = document.createElement('div');
-    badge.className = 'form__product-badge';
-    badge.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-      <span><strong>Produs selectat:</strong> ${produsInput.value}</span>
-    `;
-    form.insertBefore(badge, form.firstChild);
-  }
-}
-
-if (form) {
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.textContent = 'Se trimite...';
-    submitBtn.disabled = true;
-    status.textContent = '';
-    status.className = 'form__status';
-
-    const data = new FormData(form);
-    data.append('_subject', 'Cerere nouă — cuboxmodular.ro');
-    data.append('_template', 'table');
-    data.append('_captcha', 'false');
-
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
-      });
-      const json = await res.json();
-      if (json.success === 'true' || json.success === true) {
-        status.textContent = '✓ Cererea a fost trimisă! Te contactăm în cel mult 48 de ore.';
-        status.className = 'form__status success';
-        form.reset();
-      } else {
-        throw new Error(json.message);
-      }
-    } catch {
-      status.textContent = '✗ Eroare la trimitere. Scrie-ne direct la contact@cuboxmodular.ro';
-      status.className = 'form__status error';
-    } finally {
-      submitBtn.innerHTML = originalText;
-      submitBtn.disabled = false;
-    }
-  });
+  }, { threshold: 0.1 }).observe(saleCard);
 }
 
 // === GA4 EVENTS ===
@@ -239,25 +205,19 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
   el.addEventListener('click', () => trackEvent('click_email', { event_category: 'contact' }));
 });
 
-if (form) {
-  form.addEventListener('submit', () => {
-    const produs = form.querySelector('[name="produs"]');
-    trackEvent('generate_lead', {
-      event_category: 'lead',
-      produs_interes: produs ? produs.value : ''
-    });
-  });
-}
+document.addEventListener('click', (e) => {
+  const cta = e.target.closest('[data-sale-cta]');
+  if (cta) trackEvent('click_site_de_vanzare', { event_category: 'vanzare_site', pozitie: cta.dataset.saleCta });
+});
 
-const ofertaSection = document.getElementById('cerere-oferta');
-if (ofertaSection) {
+if (saleCard) {
   const fvObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        trackEvent('view_oferta_form', { event_category: 'engagement' });
+        trackEvent('view_site_de_vanzare', { event_category: 'vanzare_site' });
         fvObs.disconnect();
       }
     });
   }, { threshold: 0.3 });
-  fvObs.observe(ofertaSection);
+  fvObs.observe(saleCard);
 }
