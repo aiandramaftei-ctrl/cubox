@@ -179,7 +179,7 @@ if (!stickyCta) {
 }
 stickyCta.classList.add('sticky-cta--sale');
 stickyCta.innerHTML = `
-  <p class="sale-sticky__text"><strong>Site model de prezentare.</strong> Vrei unul personalizat?</p>
+  <p class="sale-sticky__text"><strong>Containerele nu se vând.</strong> Vrei un site ca acesta?</p>
   <a href="${SALE_HREF}" class="btn btn--primary sale-sticky__cta" data-sale-cta="mobil">${MAIL_ICON}Scrie-ne</a>
 `;
 

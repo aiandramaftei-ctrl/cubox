@@ -2752,7 +2752,27 @@ ul  { list-style: none; }
   body { padding-bottom: 72px; }
 }
 
+/* Meniul cu butonul „Vrei un site ca acesta?” incape si pe laptopurile mici (1101–1180px) */
+@media (min-width: 1101px) and (max-width: 1180px) {
+  .nav__list a { padding: 8px 6px; font-size: 12.5px; }
+  .nav__list a::after { left: 6px; right: 6px; }
+  .nav__cta { margin-left: 2px; padding: 9px 12px !important; font-size: 12.5px !important; }
+}
+/* Banda de sus se vede si pe telefon: tot continutul coboara cu inaltimea ei (40px) */
+@media (max-width: 768px) {
+  .topbar.topbar--sale { display: block; }
+  .topbar--sale .topbar__inner { padding: 0 12px; }
+  .topbar--sale .sale-bar__cta { display: none; }
+  .topbar--sale .sale-bar__text { font-size: 14px; }
+  .header { top: 40px; }
+  body { padding-top: 40px; }
+  html { scroll-padding-top: 132px; }
+}
+@media (max-width: 480px) {
+  html { scroll-padding-top: 120px; }
+}
 @media (max-width: 380px) {
+  .topbar--sale .sale-bar__text { font-size: 12.5px; }
   .sticky-cta.sticky-cta--sale { gap: 10px; padding: 10px 10px 10px 12px; }
   .sale-sticky__text { font-size: 12.5px; }
   .sticky-cta--sale .sale-sticky__cta { padding: 0 12px; font-size: 13.5px; }
